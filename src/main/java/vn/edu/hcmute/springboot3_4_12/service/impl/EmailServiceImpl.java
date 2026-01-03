@@ -9,6 +9,7 @@ import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import vn.edu.hcmute.springboot3_4_12.service.IEmailService;
 
@@ -20,6 +21,7 @@ public class EmailServiceImpl implements IEmailService {
 
     private final JavaMailSender emailSender;
 
+    @Async
     @Override
     public void sendSimpleMessage(String to, String subject, String text) {
         try {
@@ -38,6 +40,7 @@ public class EmailServiceImpl implements IEmailService {
     }
     
     // Phương thức gửi HTML (bổ sung cho đẹp)
+    @Async
     public void sendHtmlMessage(String to, String subject, String htmlContent) {
         MimeMessage message = emailSender.createMimeMessage();
         try {

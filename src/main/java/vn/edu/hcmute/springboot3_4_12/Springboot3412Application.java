@@ -6,12 +6,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableAsync;
 import vn.edu.hcmute.springboot3_4_12.config.CustomSiteMeshFilter;
 import vn.edu.hcmute.springboot3_4_12.config.StorageProperties;
 import vn.edu.hcmute.springboot3_4_12.service.IStorageService;
 @EnableConfigurationProperties(StorageProperties.class)
 
 @SpringBootApplication
+@EnableAsync
 public class Springboot3412Application {
 
 
@@ -37,8 +39,9 @@ public class Springboot3412Application {
                 System.err.println("WARNING: Cannot initialize storage service: " + e.getMessage());
             }
             
+            /*
             try {
-                // Auto-fix ALL users' passwords to '123456'
+                // Auto-fix ALL users' passwords to '123456' - DISABLED FOR PERFORMANCE
                 java.util.List<vn.edu.hcmute.springboot3_4_12.entity.User> users = userRepository.findAll();
                 for (vn.edu.hcmute.springboot3_4_12.entity.User user : users) {
                     if (!passwordEncoder.matches("123456", user.getPassword())) {
@@ -50,6 +53,7 @@ public class Springboot3412Application {
             } catch (Exception e) {
                  System.err.println("WARNING: Cannot auto-fix passwords: " + e.getMessage());
             }
+            */
         });
     }
 }
