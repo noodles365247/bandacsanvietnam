@@ -1,0 +1,59 @@
+# Core Build
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IDEs
+.trae/
+.idea/
+.vscode/
+*.iws
+*.iml
+*.ipr
+.classpath
+.project
+.settings/
+.factorypath
+.springBeans
+.sts4-cache
+.apt_generated
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+run_log.txt
+run_debug.txt
+
+# Documentation & Plans
+memory-bank/
+doc/
+docs/
+*.md
+!README.md
+
+# Scripts & Test
+src/test/
+*.py
+*.ps1
+*.sh
+check_urls.ps1
+run.ps1
+
+# Secrets
+application.properties
+application.yml
+
+# Other
+bandacsan/
+.mvn/

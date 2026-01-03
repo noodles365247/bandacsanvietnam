@@ -1,0 +1,117 @@
+/* Minimal custom styling to improve spacing and readability */
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body { 
+    background:#f8f9fa; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    width: 100%; /* Ensure main content takes full width */
+}
+
+/* Override Bootstrap container for better large screen support if needed, 
+   but generally let Bootstrap handle breakpoints. 
+   We ensure it centers correctly. */
+.container { 
+    margin-left: auto !important;
+    margin-right: auto !important;
+    /* Remove fixed max-width to allow Bootstrap's responsive widths (up to 1320px on XXL) */
+    /* max-width: 1180px; */ 
+}
+
+/* Ensure rows don't cause overflow */
+.row {
+    margin-left: -12px;
+    margin-right: -12px;
+    width: auto;
+}
+
+/* Fix col padding to match row margins if needed, but Bootstrap defaults are usually fine */
+
+header h5, header h4 { margin:0; }
+
+.card-img-top { max-height:200px; object-fit:cover; }
+footer .small { color: #cccccc; margin-top:4px; }
+button, .btn { border-radius:6px; }
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+    margin-bottom: 4rem;
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+/* Feature Icons */
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.icon-blue { color: #667eea; }
+.icon-green { color: #198754; }
+.icon-red { color: #dc3545; }
+
+/* Category Cards */
+.category-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    height: 100%;
+}
+.category-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12) !important;
+}
+.category-icon {
+    font-size: 2.5rem;
+}
+
+/* Product Cards */
+.product-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    height: 100%;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+}
+.product-image-container {
+    height: 200px;
+    overflow: hidden;
+    background: #f8f9fa;
+    position: relative;
+}
+.product-img-fit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+.product-card:hover .product-img-fit {
+    transform: scale(1.1);
+}
+.product-title-clamp {
+    min-height: 48px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.empty-state-icon {
+    font-size: 4rem;
+    color: #ccc;
+}

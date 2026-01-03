@@ -1,0 +1,53 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.4.12)
+
+2025-12-30T03:05:12.653+07:00  INFO 10948 --- [springboot3_4_12] [           main] v.e.h.s.Springboot3412Application        : Starting Springboot3412Application v0.0.1-SNAPSHOT using Java 21.0.6 with PID 10948 (D:\baocaoweb\bandacsan-main (1)\bandacsan-main\target\springboot3_4_12-0.0.1-SNAPSHOT.jar started by Lenovo in D:\baocaoweb\bandacsan-main (1)\bandacsan-main)
+2025-12-30T03:05:12.656+07:00 DEBUG 10948 --- [springboot3_4_12] [           main] v.e.h.s.Springboot3412Application        : Running with Spring Boot v3.4.12, Spring v6.2.14
+2025-12-30T03:05:12.657+07:00  INFO 10948 --- [springboot3_4_12] [           main] v.e.h.s.Springboot3412Application        : No active profile set, falling back to 1 default profile: "default"
+2025-12-30T03:05:14.425+07:00  INFO 10948 --- [springboot3_4_12] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-30T03:05:14.526+07:00  INFO 10948 --- [springboot3_4_12] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 5 JPA repository interfaces.
+2025-12-30T03:05:15.549+07:00  INFO 10948 --- [springboot3_4_12] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-12-30T03:05:15.580+07:00  INFO 10948 --- [springboot3_4_12] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-30T03:05:15.580+07:00  INFO 10948 --- [springboot3_4_12] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-12-30T03:05:16.612+07:00  INFO 10948 --- [springboot3_4_12] [           main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-12-30T03:05:16.795+07:00  INFO 10948 --- [springboot3_4_12] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-30T03:05:16.797+07:00  INFO 10948 --- [springboot3_4_12] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4069 ms
+2025-12-30T03:05:17.017+07:00  INFO 10948 --- [springboot3_4_12] [           main] o.s.config.ConfigurableSiteMeshFilter    : SiteMesh 3.2.1 initialized with filter name 'sitmeshFilter'
+2025-12-30T03:05:17.320+07:00  INFO 10948 --- [springboot3_4_12] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-30T03:05:17.480+07:00  INFO 10948 --- [springboot3_4_12] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.36.Final
+2025-12-30T03:05:17.576+07:00  INFO 10948 --- [springboot3_4_12] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-12-30T03:05:18.010+07:00  INFO 10948 --- [springboot3_4_12] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-30T03:05:18.060+07:00  INFO 10948 --- [springboot3_4_12] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-30T03:05:18.512+07:00  INFO 10948 --- [springboot3_4_12] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e5c7588
+2025-12-30T03:05:18.514+07:00  INFO 10948 --- [springboot3_4_12] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-30T03:05:18.579+07:00  WARN 10948 --- [springboot3_4_12] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-12-30T03:05:18.608+07:00  INFO 10948 --- [springboot3_4_12] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-12-30T03:05:20.069+07:00  INFO 10948 --- [springboot3_4_12] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-30T03:05:20.264+07:00  INFO 10948 --- [springboot3_4_12] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-30T03:05:20.737+07:00  INFO 10948 --- [springboot3_4_12] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-12-30T03:05:21.819+07:00  INFO 10948 --- [springboot3_4_12] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2025-12-30T03:05:22.020+07:00  WARN 10948 --- [springboot3_4_12] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-12-30T03:05:22.211+07:00  INFO 10948 --- [springboot3_4_12] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-12-30T03:05:22.860+07:00  INFO 10948 --- [springboot3_4_12] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-12-30T03:05:23.685+07:00  INFO 10948 --- [springboot3_4_12] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-12-30T03:05:23.708+07:00  INFO 10948 --- [springboot3_4_12] [           main] v.e.h.s.Springboot3412Application        : Started Springboot3412Application in 11.765 seconds (process running for 12.66)
+D:\upload
+2025-12-30T03:05:28.115+07:00  INFO 10948 --- [springboot3_4_12] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-30T03:05:28.116+07:00  INFO 10948 --- [springboot3_4_12] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-30T03:05:28.118+07:00  INFO 10948 --- [springboot3_4_12] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-30T03:05:29.415+07:00 ERROR 10948 --- [springboot3_4_12] [nio-8080-exec-1] org.sitemesh.webapp.WebAppContext        : Error 404 processing decorator '/WEB-INF/decorators//WEB-INF/decorators/user-decorator.jsp'
+2025-12-30T03:06:07.782+07:00 ERROR 10948 --- [springboot3_4_12] [nio-8080-exec-4] org.sitemesh.webapp.WebAppContext        : Error 404 processing decorator '/WEB-INF/decorators//WEB-INF/decorators/user-decorator.jsp'
