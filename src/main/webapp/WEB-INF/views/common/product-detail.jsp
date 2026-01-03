@@ -134,6 +134,34 @@
 </div>
 
 <script>
+    function addToCartAjax(event) {
+        event.preventDefault();
+        const form = event.target;
+        const formData = new FormData(form);
+        
+        fetch('<c:url value="/cart/api/add"/>', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.status === 401) {
+                window.location.href = '<c:url value="/login"/>';
+                return;
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data && data.message) {
+                alert(data.message); // Có thể thay bằng Toast notification đẹp hơn
+                // Cập nhật số lượng trên icon giỏ hàng nếu có (tùy chỉnh sau)
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Có lỗi xảy ra khi thêm vào giỏ hàng');
+        });
+    }
+
     function decreaseQty() {
         var input = document.getElementById('quantity');
         var value = parseInt(input.value);

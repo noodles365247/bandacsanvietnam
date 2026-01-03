@@ -37,6 +37,22 @@ public class CartController {
         return "redirect:/cart";
     }
 
+    @PostMapping("/api/add")
+    @ResponseBody
+    public ResponseEntity<?> addToCartApi(@RequestParam Long productId, @RequestParam Integer quantity) {
+        String username = getCurrentUsername();
+        if (username == null) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User not logged in");
+        }
+        try {
+            cartService.addToCart(username, productId, quantity);
+            CartResponseDTO cart = cartService.getCart(username);
+            return ResponseEntity.ok(Map.of("message", "Added to cart successfully", "cartSize", cart.getItems().size()));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
     @PostMapping("/update")
     public String updateCart(@RequestParam Long cartItemId, @RequestParam Integer quantity) {
         String username = getCurrentUsername();
