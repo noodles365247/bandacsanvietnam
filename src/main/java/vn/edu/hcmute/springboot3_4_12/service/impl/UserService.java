@@ -8,6 +8,7 @@ import vn.edu.hcmute.springboot3_4_12.dto.UserResponseDTO;
 import vn.edu.hcmute.springboot3_4_12.entity.User;
 import vn.edu.hcmute.springboot3_4_12.repository.UserRepository;
 import vn.edu.hcmute.springboot3_4_12.service.IUserService;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -63,12 +64,13 @@ public class UserService implements IUserService {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found"));
         
-        if (dto.getEmail() != null) user.setEmail(dto.getEmail());
-        if (dto.getFullname() != null) user.setFullname(dto.getFullname());
-        if (dto.getPhone() != null) user.setPhone(dto.getPhone());
-        if (dto.getAddress() != null) user.setAddress(dto.getAddress());
-        if (dto.getRole() != null) user.setRole(dto.getRole());
-        if (dto.getPassword() != null && !dto.getPassword().isEmpty()) {
+        if (StringUtils.hasText(dto.getEmail())) user.setEmail(dto.getEmail());
+        if (StringUtils.hasText(dto.getFullname())) user.setFullname(dto.getFullname());
+        if (StringUtils.hasText(dto.getPhone())) user.setPhone(dto.getPhone());
+        if (StringUtils.hasText(dto.getAddress())) user.setAddress(dto.getAddress());
+        if (StringUtils.hasText(dto.getRole())) user.setRole(dto.getRole());
+        
+        if (StringUtils.hasText(dto.getPassword())) {
             user.setPassword(passwordEncoder.encode(dto.getPassword()));
         }
 

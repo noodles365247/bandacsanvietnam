@@ -36,7 +36,7 @@ public class UserAccountController {
         }
         try {
             UserResponseDTO currentUser = userService.findByUsername(username);
-            userService.update(currentUser.id(), dto);
+            userService.update(currentUser.getId(), dto);
             redirectAttributes.addFlashAttribute("message", "Cập nhật thông tin thành công!");
         } catch (Exception e) {
             redirectAttributes.addFlashAttribute("error", "Lỗi: " + e.getMessage());
