@@ -39,6 +39,16 @@ public class CloudDataSourceConfig {
                     }
                 }
 
+                // Check for internal Railway URL usage on non-Railway platforms
+                if (host != null && host.endsWith(".railway.internal")) {
+                    System.err.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                    System.err.println("CRITICAL ERROR: You are using an internal Railway URL (" + host + ")");
+                    System.err.println("This URL is NOT accessible from outside Railway (e.g., Render, Localhost).");
+                    System.err.println("Please update your MYSQL_URL environment variable to use the PUBLIC URL.");
+                    System.err.println("It usually looks like: mysql://root:password@roundhouse.proxy.rlwy.net:PORT/railway");
+                    System.err.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                }
+
                 // Construct JDBC URL
                 String jdbcUrl = "jdbc:mysql://" + host + ":" + port + path + 
                                  "?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&characterEncoding=UTF-8";
