@@ -63,14 +63,15 @@ public class AdminUserController {
             
             // Map ResponseDTO to RequestDTO for form binding
             UserRequestDTO req = new UserRequestDTO();
-            req.setUsername(user.username());
-            req.setEmail(user.email());
-            req.setFullname(user.fullname());
-            req.setPhone(user.phone());
-            req.setRole(user.role());
-            req.setActive(user.active());
-            req.setImages(user.images());
-            req.setAdmin(user.admin());
+            req.setUsername(user.getUsername());
+            req.setEmail(user.getEmail());
+            req.setFullname(user.getFullname());
+            req.setPhone(user.getPhone());
+            req.setAddress(user.getAddress());
+            req.setRole(user.getRole());
+            req.setActive(user.isActive());
+            req.setImages(user.getImages());
+            req.setAdmin(user.isAdmin());
             
             model.addAttribute("user", req);
             return "admin/users/edit";
@@ -84,7 +85,7 @@ public class AdminUserController {
         try {
             // Need to find ID by username first because update service requires ID
             UserResponseDTO existing = userService.findByUsername(dto.getUsername());
-            userService.update(existing.id(), dto);
+            userService.update(existing.getId(), dto);
             
             redirectAttributes.addFlashAttribute("success", "Cập nhật người dùng thành công!");
         } catch (Exception e) {
@@ -98,7 +99,7 @@ public class AdminUserController {
     public String delete(@RequestParam("username") String username, RedirectAttributes redirectAttributes) {
         try {
             UserResponseDTO user = userService.findByUsername(username);
-            userService.deleteUser(user.id());
+            userService.deleteUser(user.getId());
             redirectAttributes.addFlashAttribute("success", "Xóa người dùng thành công!");
         } catch (Exception e) {
             redirectAttributes.addFlashAttribute("error", "Lỗi: " + e.getMessage());
