@@ -26,9 +26,9 @@ public class AdminUserController {
         if (query != null && !query.trim().isEmpty()) {
             String q = query.toLowerCase();
             users = users.stream()
-                    .filter(u -> u.username().toLowerCase().contains(q) || 
-                               (u.email() != null && u.email().toLowerCase().contains(q)) ||
-                               (u.fullname() != null && u.fullname().toLowerCase().contains(q)))
+                    .filter(u -> u.getUsername().toLowerCase().contains(q) || 
+                               (u.getEmail() != null && u.getEmail().toLowerCase().contains(q)) ||
+                               (u.getFullname() != null && u.getFullname().toLowerCase().contains(q)))
                     .collect(Collectors.toList());
             model.addAttribute("q", query);
         }
