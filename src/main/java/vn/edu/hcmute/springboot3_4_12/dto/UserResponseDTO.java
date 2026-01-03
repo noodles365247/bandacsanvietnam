@@ -22,4 +22,26 @@ public class UserResponseDTO {
 
     // Helper methods for JSP if needed, but @Data handles basic getters
     // Lombok generates isActive() for boolean active, isAdmin() for boolean admin
+    
+    // Manual Getters/Setters
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public String getUsername() { return username; }
+    public void setUsername(String username) { this.username = username; }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+    public String getFullname() { return fullname; }
+    public void setFullname(String fullname) { this.fullname = fullname; }
+    public String getPhone() { return phone; }
+    public void setPhone(String phone) { this.phone = phone; }
+    public String getAddress() { return address; }
+    public void setAddress(String address) { this.address = address; }
+    public String getRole() { return role; }
+    public void setRole(String role) { this.role = role; }
+    public boolean isActive() { return active; }
+    public void setActive(boolean active) { this.active = active; }
+    public String getImages() { return images; }
+    public void setImages(String images) { this.images = images; }
+    public boolean isAdmin() { return admin; }
+    public void setAdmin(boolean admin) { this.admin = admin; }
 }
