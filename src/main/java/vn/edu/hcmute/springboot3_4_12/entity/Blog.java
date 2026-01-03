@@ -10,6 +10,9 @@ import java.util.Set;
 
 @Entity
 @Table(name = "blogs")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,5 +37,20 @@ public class Blog {
     )
     private List<Product> products = new ArrayList<>();
 
+    // Manual Getters/Setters
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public String getTitleVi() { return titleVi; }
+    public void setTitleVi(String titleVi) { this.titleVi = titleVi; }
+    public String getTitleEn() { return titleEn; }
+    public void setTitleEn(String titleEn) { this.titleEn = titleEn; }
+    public String getContentVi() { return contentVi; }
+    public void setContentVi(String contentVi) { this.contentVi = contentVi; }
+    public String getContentEn() { return contentEn; }
+    public void setContentEn(String contentEn) { this.contentEn = contentEn; }
+    public User getAuthor() { return author; }
+    public void setAuthor(User author) { this.author = author; }
+    public List<Product> getProducts() { return products; }
+    public void setProducts(List<Product> products) { this.products = products; }
 }
 
