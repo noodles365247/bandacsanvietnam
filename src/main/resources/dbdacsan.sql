@@ -45,7 +45,9 @@ CREATE TABLE `users` (
   `fullname` varchar(255) DEFAULT NULL,
   `phone` varchar(20) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
-  `avatar` varchar(500) DEFAULT NULL,
+  `images` varchar(500) DEFAULT NULL,
+  `otp` varchar(64) DEFAULT NULL,
+  `otp_expiration` datetime DEFAULT NULL,
   `role` varchar(50) DEFAULT NULL, -- ADMIN, VENDOR, USER
   `active` bit(1) DEFAULT 1,
   `reset_password_token` varchar(64) DEFAULT NULL,
@@ -317,7 +319,7 @@ CREATE TABLE `promotions` (
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- 4.1. USERS (Mật khẩu: 123456)
-INSERT INTO `users` (`id`, `username`, `password`, `email`, `fullname`, `role`, `active`, `avatar`, `phone`) VALUES 
+INSERT INTO `users` (`id`, `username`, `password`, `email`, `fullname`, `role`, `active`, `images`, `phone`) VALUES 
 (1, 'admin', '$2b$12$ZxOyXV9VIyQ9LczZ1j1n0ulIpU2.rYoM5kC2GfFKZ1u3GZq0JTfW.', 'admin@gmail.com', 'Admin Hệ Thống', 'ADMIN', 1, 'https://ui-avatars.com/api/?name=Admin&background=0D8ABC&color=fff', '0909000111'),
 (2, 'vendor_bac', '$2b$12$ZxOyXV9VIyQ9LczZ1j1n0ulIpU2.rYoM5kC2GfFKZ1u3GZq0JTfW.', 'bac@dacsan.com', 'Chủ Shop Bắc', 'VENDOR', 1, 'https://ui-avatars.com/api/?name=Vendor+Bac&background=E74C3C&color=fff', '0909000222'),
 (3, 'vendor_nam', '$2b$12$ZxOyXV9VIyQ9LczZ1j1n0ulIpU2.rYoM5kC2GfFKZ1u3GZq0JTfW.', 'nam@dacsan.com', 'Chủ Shop Nam', 'VENDOR', 1, 'https://ui-avatars.com/api/?name=Vendor+Nam&background=F1C40F&color=fff', '0909000333'),
