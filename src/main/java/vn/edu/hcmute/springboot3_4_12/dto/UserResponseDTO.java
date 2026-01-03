@@ -44,18 +44,4 @@ public class UserResponseDTO {
     public void setImages(String images) { this.images = images; }
     public boolean isAdmin() { return admin; }
     public void setAdmin(boolean admin) { this.admin = admin; }
-
-    // Manual Constructor to ensure compatibility
-    public UserResponseDTO(Long id, String username, String email, String fullname, String phone, String address, String role, boolean active, String images, boolean admin) {
-        this.id = id;
-        this.username = username;
-        this.email = email;
-        this.fullname = fullname;
-        this.phone = phone;
-        this.address = address;
-        this.role = role;
-        this.active = active;
-        this.images = images;
-        this.admin = admin;
-    }
 }
