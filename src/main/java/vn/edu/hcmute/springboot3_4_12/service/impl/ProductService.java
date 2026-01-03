@@ -164,8 +164,7 @@ public class ProductService implements IProductService {
     @Override
     public List<ProductResponseDTO> getFeaturedProducts() {
         // Step 1: Get top 8 product IDs
-        Page<Product> page = productRepository.findAll(org.springframework.data.domain.PageRequest.of(0, 8, org.springframework.data.domain.Sort.by("id").descending()));
-        List<Long> ids = page.stream().map(Product::getId).collect(Collectors.toList());
+        List<Long> ids = productRepository.findTop8Ids(org.springframework.data.domain.PageRequest.of(0, 8));
 
         if (ids.isEmpty()) {
             return Collections.emptyList();

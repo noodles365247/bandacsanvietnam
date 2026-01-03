@@ -50,7 +50,9 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
     @Query("SELECT p FROM Product p LEFT JOIN FETCH p.categories WHERE p.id = :id")
     java.util.Optional<Product> findByIdWithCategories(@Param("id") Long id);
 
-    @Query("SELECT DISTINCT p FROM Product p LEFT JOIN FETCH p.images WHERE p.id IN :ids")
+    @Query("SELECT DISTINCT p FROM Product p LEFT JOIN FETCH p.images LEFT JOIN FETCH p.vendor WHERE p.id IN :ids")
     List<Product> findAllByIdWithImages(@Param("ids") List<Long> ids);
 
+    @Query("SELECT p.id FROM Product p ORDER BY p.id DESC")
+    List<Long> findTop8Ids(org.springframework.data.domain.Pageable pageable);
 }
