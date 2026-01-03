@@ -1,101 +1,107 @@
-# BANDACSAN RUNBOOK - RENDER DEPLOYMENT GUIDE
+# RUNBOOK: Triển khai & Khắc phục sự cố trên Render
 
-## 1. Environment Configuration (Cấu hình môi trường)
+Tài liệu này hướng dẫn chi tiết về cấu hình, giám sát và xử lý sự cố khi triển khai ứng dụng **Bandacsan** (Spring Boot + JSP) trên nền tảng Cloud Render.
 
-Render yêu cầu các biến môi trường (Environment Variables) để ứng dụng hoạt động chính xác. Bạn cần cấu hình các biến sau trong phần **Environment** của Render Service:
+---
 
-### Required Variables (Bắt buộc)
-| Variable Name | Description | Example Value |
-|---------------|-------------|---------------|
-| `MYSQL_URL` | JDBC URL kết nối Database | `jdbc:mysql://monorail.proxy.rlwy.net:12345/railway?useSSL=false` |
-| `MYSQLUSER` | Database Username | `root` |
-| `MYSQLPASSWORD` | Database Password | `your_secure_password` |
-| `JWT_SECRET` | Secret key để ký JWT Token | `your_very_long_secret_key_at_least_256_bits` |
-| `PORT` | Render tự động cấp, nhưng cần config trong app | (Render tự set, App đã config `server.port=${PORT:8081}`) |
+## 1. Vấn đề về cấu hình môi trường
 
-### Optional Variables (Tùy chọn/Nâng cao)
-| Variable Name | Description | Default if missing |
-|---------------|-------------|--------------------|
-| `MAIL_USERNAME` | Gmail gửi OTP/Thông báo | `your-email@gmail.com` |
-| `MAIL_PASSWORD` | App Password của Gmail | `your-app-password` |
-| `VNPAY_TMN_CODE`| Mã Website VNPay | `YOUR_TMN_CODE` |
-| `VNPAY_HASH_SECRET`| Secret Key VNPay | `YOUR_HASH_SECRET` |
-| `VNPAY_RETURN_URL`| URL redirect sau thanh toán | `https://your-app.onrender.com/payment/vnpay-return` |
+### 1.1. Biến môi trường (Environment Variables)
+Cần thiết lập chính xác các biến sau trong **Render Dashboard > Environment**:
 
-**Lưu ý:**
-- **Không** lưu credentials trong code (`application.properties` chỉ chứa fallback cho localhost).
-- `package.json` không áp dụng cho dự án Spring Boot này (trừ khi có Frontend nodejs riêng). Quản lý dependency qua `pom.xml`.
+| Biến (Key) | Giá trị mẫu (Value) | Ý nghĩa | Quan trọng |
+|------------|---------------------|---------|------------|
+| `MYSQL_URL` | `jdbc:mysql://host:port/db?useSSL=false` | Chuỗi kết nối Database (Railway) | **Cực kỳ quan trọng** |
+| `MYSQLUSER` | `root` | Username Database | **Cực kỳ quan trọng** |
+| `MYSQLPASSWORD` | `******` | Password Database | **Cực kỳ quan trọng** |
+| `JWT_SECRET` | `chuoi_bi_mat_dai_hon_256_bit` | Khóa bí mật ký token bảo mật | **Quan trọng** |
+| `JAVA_TOOL_OPTIONS` | `-Xmx350m -Xms256m` | Giới hạn RAM cho JVM (Tránh Crash) | **Cực kỳ quan trọng** |
+| `PORT` | (Render tự điền) | Cổng mạng (App tự nhận diện) | Tự động |
 
-## 2. Resource Management (Quản lý tài nguyên)
+### 1.2. Quản lý Dependencies
+*   **Lưu ý quan trọng:** Dự án này là **Java Spring Boot**, sử dụng `pom.xml` (Maven) để quản lý thư viện.
+*   **Không dùng `package.json`:** File này chỉ dành cho Node.js. Mọi thay đổi thư viện Java phải thực hiện trong `pom.xml`.
+*   **Version Control:** Dockerfile sử dụng `maven:3.8.5-openjdk-17` để build, đảm bảo tính nhất quán với môi trường dev.
 
-### RAM Limitations (Free Tier)
-Render Free Tier giới hạn **512MB RAM**. Spring Boot mặc định có thể dùng nhiều hơn, dẫn đến Crash (OOMKilled).
+---
 
-**Giải pháp đã áp dụng:**
-- **Dockerfile:** Đã cấu hình `JAVA_TOOL_OPTIONS="-Xmx350m -Xms350m"` để giới hạn Heap Size của Java Virtual Machine (JVM) ở mức an toàn (350MB), chừa lại ~150MB cho OS và Overhead.
-- **Health Check:** Theo dõi log khởi động. Nếu app crash ngay khi start, cần xem xét giảm `-Xmx` xuống `300m`.
+## 2. Vấn đề về tài nguyên (RAM/CPU)
 
-### Ephemeral Filesystem (Ổ cứng tạm thời)
-**CẢNH BÁO:** Render (loại Web Service miễn phí) sử dụng ổ cứng tạm thời (Ephemeral).
-- **Vấn đề:** Mọi file upload (ảnh sản phẩm, avatar) lưu vào thư mục `uploads/` hoặc `src/main/resources/static/images` sẽ bị **XÓA SẠCH** sau mỗi lần deploy hoặc restart.
-- **Giải pháp:**
-    1.  **Ngắn hạn:** Chấp nhận mất dữ liệu ảnh khi restart (chỉ dùng cho Demo).
-    2.  **Dài hạn (Production):** Phải tích hợp Cloud Storage (AWS S3, Cloudinary, Firebase) để lưu ảnh.
-    3.  **Code Action:** Kiểm tra `FileStorageService` để đảm bảo không crash app nếu thư mục không tồn tại (đã xử lý bằng `Files.createDirectories`).
+### 2.1. Giới hạn bộ nhớ (RAM Limit)
+*   **Vấn đề:** Render Free Tier chỉ cung cấp **512MB RAM**. Nếu Spring Boot dùng quá mức này, Container sẽ bị Kill (OOMKilled).
+*   **Giải pháp đã áp dụng:**
+    *   Biến môi trường `JAVA_TOOL_OPTIONS="-Xmx350m -Xms256m"` đã được set cứng trong Dockerfile.
+    *   Điều này ép buộc Java chỉ dùng tối đa 350MB Heap, để dành ~162MB cho OS và các tiến trình khác.
 
-## 3. Database Connectivity (Kết nối CSDL)
+### 2.2. CPU & Auto-scaling
+*   **CPU:** Free Tier dùng shared CPU. Tránh các tác vụ nặng (như xử lý ảnh/video quá lớn) trên server.
+*   **Auto-scaling:** Render Free Tier **không hỗ trợ** auto-scaling.
+    *   *Khuyến nghị:* Nếu lượng user tăng đột biến, cần nâng cấp lên gói Starter ($7/tháng) để scale manual hoặc auto.
 
-Database (Railway MySQL) nằm ngoài mạng nội bộ của Render, nên có thể gặp độ trễ hoặc ngắt kết nối.
+### 2.3. Lưu trữ tạm thời (Ephemeral Storage)
+*   **Cảnh báo:** Ổ cứng trên Render Free là tạm thời. Dữ liệu trong thư mục `uploads/` sẽ **mất sạch** khi Restart/Deploy.
+*   **Giải pháp:**
+    *   Hiện tại: Chấp nhận mất ảnh khi redeploy (phù hợp demo).
+    *   Tương lai: Cần tích hợp AWS S3 hoặc Cloudinary để lưu file bền vững.
 
-**Giải pháp đã áp dụng (`application.properties`):**
-- **HikariCP Pooling:**
-    - `connection-timeout=20000`: Chờ tối đa 20s để lấy kết nối.
-    - `minimum-idle=5`: Giữ 5 kết nối rảnh để sẵn sàng.
-    - `maximum-pool-size=12`: Không mở quá nhiều kết nối (tránh lỗi "Too many connections" từ Railway Free Tier).
-    - `max-lifetime=1800000`: Reset kết nối mỗi 30 phút để tránh kết nối "ma".
-    - `validation-timeout=5000`: Kiểm tra kết nối còn sống không trước khi dùng.
+---
 
-## 4. Deployment & Monitoring (Triển khai & Giám sát)
+## 3. Vấn đề kết nối cơ sở dữ liệu
 
-### Build Process
-- Sử dụng **Docker Multi-stage Build** (trong `Dockerfile`) để giảm kích thước image và không cần cài Maven trên Render.
-- Lệnh build: `mvn clean package -DskipTests` (để tiết kiệm thời gian và tránh lỗi test môi trường CI).
+### 3.1. Connection Pooling (HikariCP)
+Cấu hình trong `application.properties` đã được tối ưu cho môi trường Cloud hạn chế tài nguyên:
 
-### Health Checks
-Render cần biết khi nào App sẵn sàng để điều hướng traffic.
-- **Health Path:** `/actuator/health` (Đã thêm dependency `spring-boot-starter-actuator`).
-- **Cấu hình Render:** Trong phần Settings -> Health Check Path, điền `/actuator/health`. Nếu trả về `{"status":"UP"}`, Render sẽ mark service là Healthy.
+*   `spring.datasource.hikari.maximum-pool-size=12`: Giới hạn tối đa 12 kết nối (Railway Free giới hạn tổng connection, không nên set quá cao).
+*   `spring.datasource.hikari.minimum-idle=5`: Giữ sẵn 5 kết nối để phản hồi nhanh.
+*   `spring.datasource.hikari.connection-timeout=20000`: Timeout 20 giây (tránh treo app khi mạng lag).
+*   `spring.datasource.hikari.max-lifetime=1800000`: Reset kết nối mỗi 30 phút.
 
-### CI/CD
-- Render có tính năng "Auto Deploy" khi push lên nhánh `main`.
-- **Quy trình:**
-    1. Dev fix lỗi/thêm feature.
-    2. Test local.
-    3. Commit & Push `main`.
-    4. Render tự động detect -> Build Docker -> Deploy.
+### 3.2. Kiểm tra kết nối
+*   Hệ thống sử dụng `spring.sql.init.mode=always` để tự động kiểm tra và khởi tạo dữ liệu khi khởi động.
+*   Nếu app start thành công, nghĩa là kết nối DB ổn định.
 
-## 5. Mitigation & Troubleshooting (Khắc phục sự cố)
+---
 
-### Logging
-- Log được xuất ra `STDOUT` (Console). Xem trực tiếp tại tab **Logs** trên Render Dashboard.
-- Đã cấu hình log level `DEBUG` cho các package quan trọng (`vn.edu.hcmute`, `org.springframework.web`) để dễ trace lỗi.
+## 4. Vấn đề triển khai (Deployment)
 
-### Common Errors & Fixes
-1.  **`OutOfMemoryError` / App Crash liên tục:**
-    - *Nguyên nhân:* RAM không đủ.
-    - *Fix:* Giảm `-Xmx` trong Dockerfile xuống `300m` hoặc `256m`.
-2.  **`CommunicationsLinkFailure` (Database):**
-    - *Nguyên nhân:* Railway MySQL ngủ đông hoặc mạng lag.
-    - *Fix:* Kiểm tra lại biến môi trường `MYSQL_URL`. Đảm bảo URL có `useSSL=false`.
-3.  **`404 Not Found` (JSP View):**
-    - *Nguyên nhân:* Docker không copy đúng thư mục `WEB-INF`.
-    - *Fix:* Kiểm tra Dockerfile lệnh `COPY src/main/webapp /app/src/main/webapp` (đã có trong Dockerfile hiện tại).
-4.  **`Cannot find symbol` (Build fail):**
-    - *Nguyên nhân:* Lombok không chạy trên CI.
-    - *Fix:* Thêm Manual Getter/Setter (đã thực hiện cho các DTO/Entity quan trọng).
+### 4.1. Quy trình CI/CD
+*   **Source:** GitHub Repository (`main` branch).
+*   **Trigger:** Tự động deploy khi có commit mới vào nhánh `main`.
+*   **Build:** Docker Multi-stage build (giảm dung lượng image xuống < 300MB).
+    *   Stage 1: Maven Build (`mvn clean package -DskipTests`)
+    *   Stage 2: Run (`java -jar app.war`)
 
-### Rollback Plan
-Nếu deploy mới bị lỗi nghiêm trọng:
-1. Vào Render Dashboard -> Deploys.
-2. Tìm phiên bản thành công trước đó (có dấu tick xanh).
-3. Bấm **Rollback** để revert về phiên bản đó ngay lập tức.
+### 4.2. Health Check & Monitoring
+*   **Endpoint:** `/actuator/health`
+*   **Cấu hình Render:**
+    *   Health Check Path: `/actuator/health`
+    *   Nếu trả về `{"status":"UP"}`, Render mới điều hướng traffic vào.
+*   **Lợi ích:** Tránh lỗi 502 Bad Gateway khi app đang khởi động (Spring Boot mất 30s-60s để start).
+
+---
+
+## 5. Biện pháp khắc phục sự cố (Troubleshooting)
+
+### 5.1. Logging tập trung
+*   Log được đẩy ra **STDOUT** và xem trực tiếp tại tab **Logs** trên Render.
+*   Level log: `DEBUG` cho `vn.edu.hcmute` để dễ dàng trace lỗi logic.
+
+### 5.2. Rollback Plan (Kế hoạch khôi phục)
+Khi deploy phiên bản mới bị lỗi (Crash, lỗi logic nghiêm trọng):
+1.  Truy cập **Render Dashboard** -> Chọn Service.
+2.  Vào tab **Events** hoặc **History**.
+3.  Tìm phiên bản deploy thành công gần nhất (có dấu tích xanh ✅).
+4.  Nhấn **Rollback** (hoặc Redeploy commit đó).
+5.  Thời gian rollback: ~2-3 phút.
+
+### 5.3. Các lỗi thường gặp & Cách xử lý
+
+| Triệu chứng | Nguyên nhân tiềm năng | Cách xử lý |
+|-------------|-----------------------|------------|
+| **App Crash ngay khi start** | Thiếu RAM hoặc sai biến môi trường DB | Kiểm tra Log. Nếu lỗi `OOMKilled` -> Giảm `-Xmx`. Nếu lỗi JDBC -> Check `MYSQL_URL`. |
+| **Lỗi `Cannot find symbol`** | Lombok chưa chạy khi build | Thêm Manual Getter/Setter vào Entity/DTO tương ứng. |
+| **Lỗi 502 Bad Gateway** | App chưa start xong hoặc Health check fail | Chờ 1-2 phút. Kiểm tra log xem có Exception nào chặn start không. |
+| **Mất ảnh đã upload** | Do cơ chế Ephemeral Storage | Upload lại ảnh. Đây là đặc tính của Render Free. |
+
+---
+*Tài liệu này cần được cập nhật mỗi khi có thay đổi lớn về hạ tầng hoặc cấu hình.*
