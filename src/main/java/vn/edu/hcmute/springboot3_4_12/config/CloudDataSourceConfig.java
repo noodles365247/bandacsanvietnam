@@ -19,6 +19,13 @@ public class CloudDataSourceConfig {
     @Primary
     @ConfigurationProperties("spring.datasource.hikari")
     public DataSource dataSource(DataSourceProperties properties, @Value("${MYSQL_URL:}") String mysqlUrl) {
+        if (StringUtils.hasText(mysqlUrl)) {
+            String maskedUrl = mysqlUrl.replaceAll(":[^:@]+@", ":******@");
+            System.out.println("CloudDataSourceConfig: Found MYSQL_URL env var: " + maskedUrl);
+        } else {
+            System.out.println("CloudDataSourceConfig: MYSQL_URL env var is empty or null.");
+        }
+
         HikariDataSource ds;
         // Check if MYSQL_URL is present and starts with mysql:// (typical for Railway/Cloud)
         if (StringUtils.hasText(mysqlUrl) && mysqlUrl.startsWith("mysql://")) {
@@ -41,12 +48,17 @@ public class CloudDataSourceConfig {
 
                 // Check for internal Railway URL usage on non-Railway platforms
                 if (host != null && host.endsWith(".railway.internal")) {
-                    System.err.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-                    System.err.println("CRITICAL ERROR: You are using an internal Railway URL (" + host + ")");
-                    System.err.println("This URL is NOT accessible from outside Railway (e.g., Render, Localhost).");
-                    System.err.println("Please update your MYSQL_URL environment variable to use the PUBLIC URL.");
-                    System.err.println("It usually looks like: mysql://root:password@roundhouse.proxy.rlwy.net:PORT/railway");
-                    System.err.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                    String errorMsg = """
+                        
+                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                        CRITICAL ERROR: You are using an internal Railway URL (%s)
+                        This URL is NOT accessible from outside Railway (e.g., Render, Localhost).
+                        Please update your MYSQL_URL environment variable to use the PUBLIC URL.
+                        It usually looks like: mysql://root:password@roundhouse.proxy.rlwy.net:PORT/railway
+                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                        """.formatted(host);
+                    System.err.println(errorMsg);
+                    throw new RuntimeException(errorMsg);
                 }
 
                 // Construct JDBC URL
