@@ -3,6 +3,8 @@
 -- Phien ban: Demo Final
 -- ============================================================
 
+SET FOREIGN_KEY_CHECKS = 0;
+
 -- 1. XOA SACH DU LIEU CU (DROP TABLES)
 -- Luu y: Thu tu xoa phai nguoc voi thu tu tao de tranh loi Foreign Key
 
@@ -420,3 +422,5 @@ INSERT INTO `images` (`product_id`, `url`, `main`) VALUES
 (28, 'https://loremflickr.com/600/400/food?lock=28', 1),
 (29, 'https://loremflickr.com/600/400/food?lock=29', 1),
 (30, 'https://loremflickr.com/600/400/food?lock=30', 1);
+
+SET FOREIGN_KEY_CHECKS = 1;
