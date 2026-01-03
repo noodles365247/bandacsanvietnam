@@ -1,7 +1,6 @@
 package vn.edu.hcmute.springboot3_4_12.config;
 
 import jakarta.servlet.http.HttpServletRequest;
-import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,7 +8,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 @Configuration
-@Getter
 public class VNPayConfig {
     @Value("${vnpay.url}")
     private String vnp_PayUrl;
@@ -25,6 +23,13 @@ public class VNPayConfig {
     
     @Value("${vnpay.api_url:https://sandbox.vnpayment.vn/merchant_webapi/api/transaction}")
     private String vnp_ApiUrl;
+
+    // Manual Getters to bypass Lombok issues
+    public String getVnp_PayUrl() { return vnp_PayUrl; }
+    public String getVnp_ReturnUrl() { return vnp_ReturnUrl; }
+    public String getVnp_TmnCode() { return vnp_TmnCode; }
+    public String getSecretKey() { return secretKey; }
+    public String getVnp_ApiUrl() { return vnp_ApiUrl; }
 
     public static String hmacSHA512(String key, String data) {
         try {

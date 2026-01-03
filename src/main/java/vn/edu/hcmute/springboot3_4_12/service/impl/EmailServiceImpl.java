@@ -3,7 +3,8 @@ package vn.edu.hcmute.springboot3_4_12.service.impl;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -13,8 +14,9 @@ import vn.edu.hcmute.springboot3_4_12.service.IEmailService;
 
 @Service
 @RequiredArgsConstructor
-@Slf4j
 public class EmailServiceImpl implements IEmailService {
+
+    private static final Logger log = LoggerFactory.getLogger(EmailServiceImpl.class);
 
     private final JavaMailSender emailSender;
 

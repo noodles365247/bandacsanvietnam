@@ -4,9 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "categories")
@@ -27,4 +25,18 @@ public class Category {
     @ToString.Exclude
     @ManyToMany(mappedBy = "categories")
     private List<Product> products = new ArrayList<>();
+
+    // Manual Getters/Setters to bypass Lombok issues
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public String getNameVi() { return nameVi; }
+    public void setNameVi(String nameVi) { this.nameVi = nameVi; }
+    public String getNameEn() { return nameEn; }
+    public void setNameEn(String nameEn) { this.nameEn = nameEn; }
+    public String getImage() { return image; }
+    public void setImage(String image) { this.image = image; }
+    public Boolean getStatus() { return status; }
+    public void setStatus(Boolean status) { this.status = status; }
+    public List<Product> getProducts() { return products; }
+    public void setProducts(List<Product> products) { this.products = products; }
 }
