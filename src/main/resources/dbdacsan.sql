@@ -324,7 +324,7 @@ INSERT INTO `users` (`id`, `username`, `password`, `email`, `fullname`, `role`, 
 (5, 'khachhang2', '$2b$12$ZxOyXV9VIyQ9LczZ1j1n0ulIpU2.rYoM5kC2GfFKZ1u3GZq0JTfW.', 'khach2@gmail.com', 'Trần Thị Sắm', 'USER', 1, 'https://ui-avatars.com/api/?name=Tran+Sam&background=random', '0909000555');
 
 -- 4.2. VENDORS
-INSERT INTO `vendors` (`id`, `user_id`, `store_name`, `address`, `phone`, `description_vi`, `avatar`) VALUES 
+INSERT INTO `vendors` (`id`, `user_id`, `shop_name`, `address`, `phone`, `description_vi`, `logo`) VALUES 
 (1, 2, 'Hương Vị Miền Bắc', 'Số 10, Phố Cổ, Hà Nội', '0901234567', 'Chuyên cung cấp đặc sản chuẩn vị Bắc Bộ, đảm bảo vệ sinh an toàn thực phẩm.', 'https://placehold.co/100x100/E74C3C/fff?text=Bac'),
 (2, 3, 'Đặc Sản Phương Nam', 'Quận 1, TP. Hồ Chí Minh', '0909888777', 'Mang hương vị miền Tây sông nước đến mọi nhà.', 'https://placehold.co/100x100/F1C40F/fff?text=Nam');
 
