@@ -10,5 +10,5 @@ FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 COPY --from=build /app/target/*.war app.war
 EXPOSE 8080
-ENV JAVA_TOOL_OPTIONS="-Xmx350m -Xms256m"
+ENV JAVA_TOOL_OPTIONS="-Xmx350m -Xms256m -Djava.net.preferIPv4Stack=true"
 ENTRYPOINT ["java", "-jar", "app.war"]
