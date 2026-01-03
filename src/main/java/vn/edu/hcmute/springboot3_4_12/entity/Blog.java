@@ -1,7 +1,7 @@
 package vn.edu.hcmute.springboot3_4_12.entity;
 
 import jakarta.persistence.*;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.HashSet;

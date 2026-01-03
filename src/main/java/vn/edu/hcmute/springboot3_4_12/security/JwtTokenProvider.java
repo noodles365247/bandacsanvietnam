@@ -3,7 +3,8 @@ package vn.edu.hcmute.springboot3_4_12.security;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
@@ -12,8 +13,9 @@ import java.security.Key;
 import java.util.Date;
 
 @Component
-@Slf4j
 public class JwtTokenProvider {
+
+    private static final Logger log = LoggerFactory.getLogger(JwtTokenProvider.class);
 
     @Value("${app.jwtSecret:U2VjcmV0S2V5TXVzdEJlYXRMZWFzdDI1NkJpdHhMb25nU29UaGlzSXNBVmFsaWRLZXlGb3JIUzI1NkFsZ29yaXRobQ==}")
     private String jwtSecret;
