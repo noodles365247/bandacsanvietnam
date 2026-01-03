@@ -60,12 +60,12 @@ CREATE TABLE `users` (
 CREATE TABLE `vendors` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `user_id` bigint DEFAULT NULL,
-  `store_name` varchar(255) DEFAULT NULL,
+  `shop_name` varchar(255) DEFAULT NULL,
   `description_vi` text,
   `description_en` text,
   `address` varchar(255) DEFAULT NULL,
   `phone` varchar(20) DEFAULT NULL,
-  `avatar` varchar(500) DEFAULT NULL,
+  `logo` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_user_id` (`user_id`),
   CONSTRAINT `FK_vendors_users` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
