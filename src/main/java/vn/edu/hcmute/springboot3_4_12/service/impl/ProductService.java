@@ -163,8 +163,21 @@ public class ProductService implements IProductService {
 
     @Override
     public List<ProductResponseDTO> getFeaturedProducts() {
-        return productRepository.findAll(org.springframework.data.domain.PageRequest.of(0, 8, org.springframework.data.domain.Sort.by("id").descending()))
-                .stream()
+        // Step 1: Get top 8 product IDs
+        Page<Product> page = productRepository.findAll(org.springframework.data.domain.PageRequest.of(0, 8, org.springframework.data.domain.Sort.by("id").descending()));
+        List<Long> ids = page.stream().map(Product::getId).collect(Collectors.toList());
+
+        if (ids.isEmpty()) {
+            return Collections.emptyList();
+        }
+
+        // Step 2: Fetch products with images eagerly to avoid N+1
+        List<Product> productsWithImages = productRepository.findAllByIdWithImages(ids);
+        
+        // Sort by ID descending (in memory)
+        productsWithImages.sort((p1, p2) -> p2.getId().compareTo(p1.getId()));
+
+        return productsWithImages.stream()
                 .map(this::convertToResponseDTO)
                 .collect(Collectors.toList());
     }
