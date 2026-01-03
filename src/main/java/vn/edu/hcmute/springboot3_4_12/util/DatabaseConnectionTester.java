@@ -187,10 +187,11 @@ public class DatabaseConnectionTester {
                     try {
                         stmt.execute(trimmedSql);
                         count++;
-                        if (count % 10 == 0) System.out.print(".");
+                        // if (count % 10 == 0) System.out.print(".");
+                        System.out.println("SUCCESS: " + (trimmedSql.length() > 50 ? trimmedSql.substring(0, 50) + "..." : trimmedSql));
                     } catch (SQLException e) {
                         System.err.println("\nError executing statement: " + trimmedSql);
-                        System.err.println(e.getMessage());
+                        System.err.println("Reason: " + e.getMessage());
                         // Continue or break? Let's continue for minor errors, but warn.
                     }
                 }

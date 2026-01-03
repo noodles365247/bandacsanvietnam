@@ -44,6 +44,7 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `fullname` varchar(255) DEFAULT NULL,
   `phone` varchar(20) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
   `avatar` varchar(500) DEFAULT NULL,
   `role` varchar(50) DEFAULT NULL, -- ADMIN, VENDOR, USER
   `active` bit(1) DEFAULT 1,
