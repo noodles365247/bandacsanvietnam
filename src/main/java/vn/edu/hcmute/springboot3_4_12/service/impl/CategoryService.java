@@ -1,6 +1,8 @@
 package vn.edu.hcmute.springboot3_4_12.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import vn.edu.hcmute.springboot3_4_12.dto.CategoryRequestDTO;
@@ -25,6 +27,7 @@ public class CategoryService implements ICategoryService {
 
     @Override
     @Transactional(readOnly = true)
+    @Cacheable(value = "categories")
     public List<CategoryResponseDTO> getAll() {
         return categoryRepository.findAll().stream()
                 .map(category -> CategoryMapper.INSTANCE.toResponseDTO(category))
@@ -33,6 +36,7 @@ public class CategoryService implements ICategoryService {
 
     @Override
     @Transactional
+    @CacheEvict(value = "categories", allEntries = true)
     public CategoryResponseDTO create(CategoryRequestDTO dto) {
         // DTO -> Entity (Dùng INSTANCE)
         Category category = CategoryMapper.INSTANCE.toEntity(dto);
@@ -43,6 +47,7 @@ public class CategoryService implements ICategoryService {
 
     @Override
     @Transactional
+    @CacheEvict(value = "categories", allEntries = true)
     public CategoryResponseDTO update(Long id, CategoryRequestDTO dto) {
         Category existingCategory = categoryRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Không tìm thấy danh mục với ID: " + id));
@@ -56,6 +61,7 @@ public class CategoryService implements ICategoryService {
 
     @Override
     @Transactional
+    @CacheEvict(value = "categories", allEntries = true)
     public void delete(Long id) {
         if (!categoryRepository.existsById(id)) {
             throw new RuntimeException("Không tìm thấy danh mục để xóa");

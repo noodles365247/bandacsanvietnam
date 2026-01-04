@@ -1,9 +1,12 @@
 package vn.edu.hcmute.springboot3_4_12.dto;
 
 import lombok.Data;
+import java.io.Serializable;
 
 @Data
-public class CategoryResponseDTO {
+public class CategoryResponseDTO implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private Long id;
     private String nameVi;
     private String nameEn;

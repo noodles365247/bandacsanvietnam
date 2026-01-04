@@ -1,0 +1,50 @@
+2026-01-04T15:23:20.910810905Z         p1_0.id desc 
+2026-01-04T15:23:20.910815705Z     limit
+2026-01-04T15:23:20.910820485Z         ?
+2026-01-04T15:23:21.11420652Z Hibernate: 
+2026-01-04T15:23:21.114226781Z     select
+2026-01-04T15:23:21.114232531Z         distinct p1_0.id,
+2026-01-04T15:23:21.114236781Z         p1_0.description_en,
+2026-01-04T15:23:21.114241221Z         p1_0.description_vi,
+2026-01-04T15:23:21.114245781Z         i1_0.product_id,
+2026-01-04T15:23:21.114249771Z         i1_0.id,
+2026-01-04T15:23:21.114253751Z         i1_0.main,
+2026-01-04T15:23:21.114267972Z         i1_0.url,
+2026-01-04T15:23:21.114270732Z         p1_0.name_en,
+2026-01-04T15:23:21.114273282Z         p1_0.name_vi,
+2026-01-04T15:23:21.114275572Z         p1_0.price,
+2026-01-04T15:23:21.114278112Z         p1_0.stock,
+2026-01-04T15:23:21.114280362Z         v1_0.id,
+2026-01-04T15:23:21.114282672Z         v1_0.address,
+2026-01-04T15:23:21.114285132Z         v1_0.description_en,
+2026-01-04T15:23:21.114287622Z         v1_0.description_vi,
+2026-01-04T15:23:21.114290122Z         v1_0.logo,
+2026-01-04T15:23:21.114292392Z         v1_0.phone,
+2026-01-04T15:23:21.114294683Z         v1_0.shop_name,
+2026-01-04T15:23:21.114297023Z         v1_0.user_id 
+2026-01-04T15:23:21.114299693Z     from
+2026-01-04T15:23:21.114302213Z         products p1_0 
+2026-01-04T15:23:21.114304763Z     left join
+2026-01-04T15:23:21.114307133Z         images i1_0 
+2026-01-04T15:23:21.114310103Z             on p1_0.id=i1_0.product_id 
+2026-01-04T15:23:21.114312553Z     left join
+2026-01-04T15:23:21.114314743Z         vendors v1_0 
+2026-01-04T15:23:21.114317103Z             on v1_0.id=p1_0.vendor_id 
+2026-01-04T15:23:21.114319403Z     where
+2026-01-04T15:23:21.114322023Z         p1_0.id in (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-04T15:23:21.659805738Z 2026-01-04T15:23:21.659Z DEBUG 1 --- [springboot3_4_12] [0-10000-exec-15] o.s.jdbc.datasource.DataSourceUtils      : Resetting read-only flag of JDBC Connection [HikariProxyConnection@1967503552 wrapping com.mysql.cj.jdbc.ConnectionImpl@22617270]
+2026-01-04T15:23:21.833063711Z 2026-01-04T15:23:21.832Z DEBUG 1 --- [springboot3_4_12] [0-10000-exec-15] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*' given [*/*]
+2026-01-04T15:23:21.910627299Z 2026-01-04T15:23:21.910Z DEBUG 1 --- [springboot3_4_12] [0-10000-exec-15] o.s.web.servlet.view.JstlView            : View name [common/index], model {featuredProducts=[ProductResponseDTO(id=30, nameVi=Dừa Sáp Trà Vinh, nameEn=Macapuno Coconut, descriptionVi=Dừa sáp béo ngậy., descriptionEn=Macapuno coconut., price=150000.0, stock=30, vendorName=Đặc Sản Phương Nam, categories=[], imageUrls=[https://placehold.co/600x400/ECF0F1/000?text=Dua+Sap]), ProductResponseDTO(id=29, nameVi=Bánh Tét Trà Cuôn, nameEn=Tra Cuon Cylindrical Cake, descriptionVi=Bánh tét Trà Vinh., descriptionEn=Cylindrical cake., price=120000.0, stock=50, vendorName=Đặc Sản Phương Nam, categories=[], imageUrls=[https://placehold.co/600x400/2ECC71/fff?text=Banh+Tet]), ProductResponseDTO(id=28, nameVi=Tôm Khô Cà Mau, nameEn=Dried Shrimp, descriptionVi=Tôm khô tự nhiên., descriptionEn=Dried shrimp., price=800000.0, stock=20, vendorName=Đặc Sản Phương Nam, categories=[], imageUrls=[https://placehold.co/600x400/E74C3C/fff?text=Tom+Kho]), ProductResponseDTO(id=27, nameVi=Nước Mắm Phú Quốc, nameEn=Fish Sauce, descriptionVi=Nước mắm nhỉ cá cơm., descriptionEn=Fish sauce., price=100000.0, stock=100, vendorName=Đặc Sản Phương Nam, categories=[], imageUrls=[https://placehold.co/600x400/D35400/fff?text=Nuoc+Mam]), ProductResponseDTO(id=26, nameVi=Rượu Sim Phú Quốc, nameEn=Sim Wine, descriptionVi=Rượu sim rừng., descriptionEn=Sim wine., price=200000.0, stock=60, vendorName=Đặc Sản Phương Nam, categories=[], imageUrls=[https://placehold.co/600x400/8E44AD/fff?text=Ruou+Sim]), ProductResponseDTO(id=25, nameVi=Hủ Tiếu Mỹ Tho, nameEn=My Tho Noodle, descriptionVi=Hủ tiếu dai ngon., descriptionEn=Noodle., price=30000.0, stock=100, vendorName=Đặc Sản Phương Nam, categories=[], imageUrls=[https://placehold.co/600x400/ECF0F1/000?text=Hu+Tieu]), ProductResponseDTO(id=24, nameVi=Nem Lai Vung, nameEn=Lai Vung Fermented Pork, descriptionVi=Nem Lai Vung Đồng Tháp., descriptionEn=Fermented pork., price=35000.0, stock=150, vendorName=Đặc Sản Phương Nam, categories=[], imageUrls=[https://placehold.co/600x400/E74C3C/fff?text=Nem+Lai+Vung]), ProductResponseDTO(id=23, nameVi=Kẹo Dừa Bến Tre, nameEn=Coconut Candy, descriptionVi=Kẹo dừa béo ngậy., descriptionEn=Coconut candy., price=40000.0, stock=300, vendorName=Đặc Sản Phương Nam, categories=[], imageUrls=[https://placehold.co/600x400/27AE60/fff?text=Keo+Dua])]}
+2026-01-04T15:23:21.910828214Z 2026-01-04T15:23:21.910Z DEBUG 1 --- [springboot3_4_12] [0-10000-exec-15] o.s.web.servlet.view.JstlView            : Forwarding to [/WEB-INF/views/common/index.jsp]
+2026-01-04T15:23:21.912054146Z 2026-01-04T15:23:21.911Z DEBUG 1 --- [springboot3_4_12] [0-10000-exec-16] o.s.security.web.FilterChainProxy        : Securing GET /health
+2026-01-04T15:23:21.913271448Z 2026-01-04T15:23:21.912Z DEBUG 1 --- [springboot3_4_12] [0-10000-exec-16] o.s.security.web.FilterChainProxy        : Secured GET /health
+2026-01-04T15:23:21.913282488Z 2026-01-04T15:23:21.913Z DEBUG 1 --- [springboot3_4_12] [0-10000-exec-16] o.s.web.servlet.DispatcherServlet        : GET "/health", parameters={}
+2026-01-04T15:23:21.913471503Z 2026-01-04T15:23:21.913Z DEBUG 1 --- [springboot3_4_12] [0-10000-exec-16] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to vn.edu.hcmute.springboot3_4_12.controller.HealthController#health()
+2026-01-04T15:23:21.915525517Z 2026-01-04T15:23:21.914Z DEBUG 1 --- [springboot3_4_12] [0-10000-exec-16] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-01-04T15:23:21.916488603Z 2026-01-04T15:23:21.914Z DEBUG 1 --- [springboot3_4_12] [0-10000-exec-16] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{message=Application is running, status=UP, timestamp=1767540201913}]
+2026-01-04T15:23:21.916510603Z 2026-01-04T15:23:21.915Z DEBUG 1 --- [springboot3_4_12] [0-10000-exec-16] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-01-04T15:23:22.011443098Z 2026-01-04T15:23:21.916Z DEBUG 1 --- [springboot3_4_12] [0-10000-exec-16] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-04T15:23:22.015140105Z 2026-01-04T15:23:22.014Z DEBUG 1 --- [springboot3_4_12] [0-10000-exec-15] o.s.security.web.FilterChainProxy        : Securing HEAD /WEB-INF/views/common/index.jsp
+2026-01-04T15:23:22.016691166Z 2026-01-04T15:23:22.016Z DEBUG 1 --- [springboot3_4_12] [0-10000-exec-15] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-01-04T15:23:22.111799745Z 2026-01-04T15:23:22.110Z DEBUG 1 --- [springboot3_4_12] [0-10000-exec-15] s.s.w.a.r.RememberMeAuthenticationFilter : SecurityContextHolder not populated with remember-me token, as it already contained: 'AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_ANONYMOUS]]'
+2026-01-04T15:23:22.111816485Z 2026-01-04T15:23:22.111Z DEBUG 1 --- [springboot3_4_12] [0-10000-exec-15] o.s.security.web.FilterChainProxy        : Secured HEAD /WEB-INF/views/common/index.jsp
