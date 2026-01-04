@@ -44,6 +44,7 @@ public class SecurityConfig {
         firewall.setAllowUrlEncodedSlash(true);
         firewall.setAllowBackSlash(true);
         firewall.setAllowUrlEncodedDoubleSlash(true);
+        firewall.setAllowSemicolon(true); // Cho phép dấu chấm phẩy (thường dùng cho jsessionid)
         return firewall;
     }
 
