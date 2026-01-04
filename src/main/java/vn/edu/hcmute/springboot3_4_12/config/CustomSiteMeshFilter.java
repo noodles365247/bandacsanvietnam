@@ -19,12 +19,12 @@ public class CustomSiteMeshFilter extends ConfigurableSiteMeshFilter{
 		builder.addExcludedPath("/WEB-INF/decorators/*");
 
 		// Decorator cho admin - Ưu tiên trước
-		builder.addDecoratorPath("/admin/*", "/admin-decorator.jsp");
+		builder.addDecoratorPath("/admin/*", "/WEB-INF/decorators/admin-decorator.jsp");
 
 		// Decorator cho vendor - Ưu tiên trước
-		builder.addDecoratorPath("/vendor/*", "/vendor-decorator.jsp");
+		builder.addDecoratorPath("/vendor/*", "/WEB-INF/decorators/vendor-decorator.jsp");
 
 		// Decorator mặc định cho user - Áp dụng cuối cùng (catch-all)
-		builder.addDecoratorPath("/*", "/main-decorator.jsp");
+		builder.addDecoratorPath("/*", "/WEB-INF/decorators/main-decorator.jsp");
 	}
 }
