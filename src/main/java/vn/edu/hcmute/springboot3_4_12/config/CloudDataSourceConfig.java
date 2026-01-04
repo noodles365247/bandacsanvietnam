@@ -67,6 +67,7 @@ public class CloudDataSourceConfig {
                 
                 // Build DataSource using default properties but override with parsed values
                 ds = properties.initializeDataSourceBuilder().type(HikariDataSource.class).build();
+                ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
                 ds.setJdbcUrl(jdbcUrl);
                 if (username != null) ds.setUsername(username);
                 if (password != null) ds.setPassword(password);

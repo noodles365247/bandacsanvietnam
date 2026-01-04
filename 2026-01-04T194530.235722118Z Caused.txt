@@ -1,0 +1,50 @@
+2026-01-04T19:45:30.235722118Z Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to instantiate [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean]: Factory method 'entityManagerFactory' threw exception with message: Driver org.h2.Driver claims to not accept jdbcUrl, jdbc:mysql://centerbeam.proxy.rlwy.net:29656/railway?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&characterEncoding=UTF-8
+2026-01-04T19:45:30.235729418Z 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.235731958Z 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.235734139Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.235744529Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.235747399Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.235749699Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.235751849Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.235754039Z 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.235756279Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.235758479Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.235760639Z 	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.235762789Z 	... 100 common frames omitted
+2026-01-04T19:45:30.235766949Z Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean]: Factory method 'entityManagerFactory' threw exception with message: Driver org.h2.Driver claims to not accept jdbcUrl, jdbc:mysql://centerbeam.proxy.rlwy.net:29656/railway?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&characterEncoding=UTF-8
+2026-01-04T19:45:30.235769129Z 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:200) ~[spring-beans-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.235773629Z 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:89) ~[spring-beans-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.235776Z 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:169) ~[spring-beans-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.23577839Z 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.23578497Z 	... 110 common frames omitted
+2026-01-04T19:45:30.23578828Z Caused by: java.lang.RuntimeException: Driver org.h2.Driver claims to not accept jdbcUrl, jdbc:mysql://centerbeam.proxy.rlwy.net:29656/railway?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&characterEncoding=UTF-8
+2026-01-04T19:45:30.23579052Z 	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:109) ~[HikariCP-5.1.0.jar!/:na]
+2026-01-04T19:45:30.23579263Z 	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:327) ~[HikariCP-5.1.0.jar!/:na]
+2026-01-04T19:45:30.23579483Z 	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:113) ~[HikariCP-5.1.0.jar!/:na]
+2026-01-04T19:45:30.23579708Z 	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:91) ~[HikariCP-5.1.0.jar!/:na]
+2026-01-04T19:45:30.23579907Z 	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar!/:na]
+2026-01-04T19:45:30.23580131Z 	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160) ~[spring-jdbc-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.23580346Z 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118) ~[spring-jdbc-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.23580555Z 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.23580767Z 	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:342) ~[spring-jdbc-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.23580971Z 	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:168) ~[spring-boot-3.4.12.jar!/:3.4.12]
+2026-01-04T19:45:30.235811981Z 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider.getDefaultDdlAuto(HibernateDefaultDdlAutoProvider.java:42) ~[spring-boot-autoconfigure-3.4.12.jar!/:3.4.12]
+2026-01-04T19:45:30.235828091Z 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.lambda$getVendorProperties$1(HibernateJpaConfiguration.java:142) ~[spring-boot-autoconfigure-3.4.12.jar!/:3.4.12]
+2026-01-04T19:45:30.235830881Z 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41) ~[spring-boot-autoconfigure-3.4.12.jar!/:3.4.12]
+2026-01-04T19:45:30.235833191Z 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:120) ~[spring-boot-autoconfigure-3.4.12.jar!/:3.4.12]
+2026-01-04T19:45:30.235835291Z 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:89) ~[spring-boot-autoconfigure-3.4.12.jar!/:3.4.12]
+2026-01-04T19:45:30.235837441Z 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:82) ~[spring-boot-autoconfigure-3.4.12.jar!/:3.4.12]
+2026-01-04T19:45:30.235840071Z 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:143) ~[spring-boot-autoconfigure-3.4.12.jar!/:3.4.12]
+2026-01-04T19:45:30.235842171Z 	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.buildJpaProperties(JpaBaseConfiguration.java:131) ~[spring-boot-autoconfigure-3.4.12.jar!/:3.4.12]
+2026-01-04T19:45:30.235844331Z 	at org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder$Builder.build(EntityManagerFactoryBuilder.java:304) ~[spring-boot-3.4.12.jar!/:3.4.12]
+2026-01-04T19:45:30.235846531Z 	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:146) ~[spring-boot-autoconfigure-3.4.12.jar!/:3.4.12]
+2026-01-04T19:45:30.235848851Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+2026-01-04T19:45:30.235855352Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+2026-01-04T19:45:30.235857772Z 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+2026-01-04T19:45:30.235860042Z 	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+2026-01-04T19:45:30.235862252Z 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:172) ~[spring-beans-6.2.14.jar!/:6.2.14]
+2026-01-04T19:45:30.235864462Z 	... 113 common frames omitted
+2026-01-04T19:45:30.235866592Z 
+2026-01-04T19:45:31.117695938Z Picked up JAVA_TOOL_OPTIONS: -Xmx350m -Xms256m -Djava.net.preferIPv4Stack=true
+2026-01-04T19:45:31.763694418Z ==> Exited with status 1
+2026-01-04T19:45:31.925443678Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
