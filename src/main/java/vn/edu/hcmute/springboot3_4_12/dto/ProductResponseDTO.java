@@ -7,11 +7,14 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.Set;
+import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductResponseDTO {
+public class ProductResponseDTO implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private Long id;
     private String nameVi;
