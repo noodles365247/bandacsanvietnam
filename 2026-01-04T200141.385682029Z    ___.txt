@@ -1,0 +1,50 @@
+2026-01-04T20:01:41.385682029Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-01-04T20:01:41.385686199Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-01-04T20:01:41.385690039Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-01-04T20:01:41.385694149Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-01-04T20:01:41.385698099Z  =========|_|==============|___/=/_/_/_/
+2026-01-04T20:01:41.385701949Z 
+2026-01-04T20:01:41.387210825Z  :: Spring Boot ::               (v3.4.12)
+2026-01-04T20:01:41.387256716Z 
+2026-01-04T20:01:42.986505413Z 2026-01-04T20:01:42.983Z  INFO 1 --- [springboot3_4_12] [           main] v.e.h.s.Springboot3412Application        : Starting Springboot3412Application v0.0.1-SNAPSHOT using Java 17.0.17 with PID 1 (/app/app.war started by root in /app)
+2026-01-04T20:01:42.989410141Z 2026-01-04T20:01:42.987Z  INFO 1 --- [springboot3_4_12] [           main] v.e.h.s.Springboot3412Application        : No active profile set, falling back to 1 default profile: "default"
+2026-01-04T20:02:11.188594007Z 2026-01-04T20:02:11.188Z  INFO 1 --- [springboot3_4_12] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-04T20:02:13.285131809Z 2026-01-04T20:02:13.284Z  INFO 1 --- [springboot3_4_12] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1900 ms. Found 13 JPA repository interfaces.
+2026-01-04T20:02:22.583589818Z ==> No open ports detected, continuing to scan...
+2026-01-04T20:02:22.959545719Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-01-04T20:02:29.590732269Z 2026-01-04T20:02:29.588Z  INFO 1 --- [springboot3_4_12] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-04T20:02:29.789125067Z 2026-01-04T20:02:29.788Z  INFO 1 --- [springboot3_4_12] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-04T20:02:29.883025302Z 2026-01-04T20:02:29.882Z  INFO 1 --- [springboot3_4_12] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.49]
+2026-01-04T20:02:57.48818304Z 2026-01-04T20:02:57.487Z  INFO 1 --- [springboot3_4_12] [           main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2026-01-04T20:03:02.183523717Z 2026-01-04T20:03:02.183Z  INFO 1 --- [springboot3_4_12] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-04T20:03:02.185010932Z 2026-01-04T20:03:02.184Z  INFO 1 --- [springboot3_4_12] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 77899 ms
+2026-01-04T20:03:05.882828069Z CloudDataSourceConfig: Found MYSQL_URL env var: mysql://root:******@centerbeam.proxy.rlwy.net:29656/railway
+2026-01-04T20:03:05.98384053Z Failed to parse MYSQL_URL, falling back to default: Failed to determine a suitable driver class
+2026-01-04T20:03:05.985727265Z 2026-01-04T20:03:05.985Z ERROR 1 --- [springboot3_4_12] [           main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in URL [jar:nested:/app/app.war/!WEB-INF/classes/!/vn/edu/hcmute/springboot3_4_12/security/JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userDetailsServiceImpl' defined in URL [jar:nested:/app/app.war/!WEB-INF/classes/!/vn/edu/hcmute/springboot3_4_12/service/impl/security/UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in vn.edu.hcmute.springboot3_4_12.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2026-01-04T20:03:06.485242202Z 2026-01-04T20:03:06.484Z  INFO 1 --- [springboot3_4_12] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-04T20:03:06.782379838Z 2026-01-04T20:03:06.688Z  WARN 1 --- [springboot3_4_12] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-01-04T20:03:07.184845597Z 2026-01-04T20:03:07.184Z  INFO 1 --- [springboot3_4_12] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-01-04T20:03:07.184884018Z 
+2026-01-04T20:03:07.184888598Z Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-04T20:03:07.588270409Z 2026-01-04T20:03:07.587Z ERROR 1 --- [springboot3_4_12] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2026-01-04T20:03:07.588298619Z 
+2026-01-04T20:03:07.588303839Z ***************************
+2026-01-04T20:03:07.588307329Z APPLICATION FAILED TO START
+2026-01-04T20:03:07.588310339Z ***************************
+2026-01-04T20:03:07.58831331Z 
+2026-01-04T20:03:07.58831709Z Description:
+2026-01-04T20:03:07.58832031Z 
+2026-01-04T20:03:07.58832399Z Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+2026-01-04T20:03:07.58832736Z 
+2026-01-04T20:03:07.58833195Z Reason: Failed to determine a suitable driver class
+2026-01-04T20:03:07.58833533Z 
+2026-01-04T20:03:07.58833819Z 
+2026-01-04T20:03:07.58834134Z Action:
+2026-01-04T20:03:07.58834468Z 
+2026-01-04T20:03:07.58834847Z Consider the following:
+2026-01-04T20:03:07.58835249Z 	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+2026-01-04T20:03:07.588356731Z 	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+2026-01-04T20:03:07.58835978Z 
+2026-01-04T20:03:08.69279206Z Picked up JAVA_TOOL_OPTIONS: -Xmx350m -Xms256m -Djava.net.preferIPv4Stack=true
+2026-01-04T20:03:09.09391293Z ==> Exited with status 1
+2026-01-04T20:03:09.25495965Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys

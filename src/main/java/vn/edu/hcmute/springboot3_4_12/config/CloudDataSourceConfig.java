@@ -65,12 +65,14 @@ public class CloudDataSourceConfig {
                 String jdbcUrl = "jdbc:mysql://" + host + ":" + port + path + 
                                  "?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&characterEncoding=UTF-8";
                 
-                // Build DataSource using default properties but override with parsed values
-                ds = properties.initializeDataSourceBuilder().type(HikariDataSource.class).build();
-                ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
-                ds.setJdbcUrl(jdbcUrl);
-                if (username != null) ds.setUsername(username);
-                if (password != null) ds.setPassword(password);
+                // Build DataSource using Builder pattern to ensure Driver is set BEFORE build()
+                // This prevents "Failed to determine a suitable driver class" error
+                ds = properties.initializeDataSourceBuilder().type(HikariDataSource.class)
+                        .driverClassName("com.mysql.cj.jdbc.Driver")
+                        .url(jdbcUrl)
+                        .username(username)
+                        .password(password)
+                        .build();
                 
                 System.out.println("Configured DataSource from MYSQL_URL: " + jdbcUrl);
                 
