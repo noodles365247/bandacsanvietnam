@@ -17,6 +17,8 @@ public class CustomSiteMeshFilter extends ConfigurableSiteMeshFilter{
 		builder.addExcludedPath("/register");
 		builder.addExcludedPath("/error");
 		builder.addExcludedPath("/decorators/*");
+		builder.addExcludedPath("/diagnosis/*");
+		builder.addExcludedPath("/diagnosis/api/*");
 
 		// Decorator cho admin - Ưu tiên trước
 		builder.addDecoratorPath("/admin/*", "/decorators/admin-decorator.jsp");

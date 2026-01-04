@@ -78,7 +78,8 @@ public class SecurityConfig {
                             new AntPathRequestMatcher("/assets/**"),
                             new AntPathRequestMatcher("/webjars/**"),
                             new AntPathRequestMatcher("/error"),
-                            new AntPathRequestMatcher("/health")
+                            new AntPathRequestMatcher("/health"),
+                            new AntPathRequestMatcher("/diagnosis/**")
                         ).permitAll() // Public resources and pages
                         .requestMatchers(new AntPathRequestMatcher("/admin/**")).hasRole("ADMIN") // Admin only
                         .requestMatchers(new AntPathRequestMatcher("/vendor/**")).hasAnyRole("VENDOR", "ADMIN") // Vendor only
