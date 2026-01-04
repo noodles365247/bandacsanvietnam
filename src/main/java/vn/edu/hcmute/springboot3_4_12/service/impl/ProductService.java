@@ -162,6 +162,7 @@ public class ProductService implements IProductService {
     }
 
     @Override
+    @org.springframework.cache.annotation.Cacheable("featuredProducts")
     public List<ProductResponseDTO> getFeaturedProducts() {
         // Step 1: Get top 8 product IDs
         List<Long> ids = productRepository.findTop8Ids(org.springframework.data.domain.PageRequest.of(0, 8));

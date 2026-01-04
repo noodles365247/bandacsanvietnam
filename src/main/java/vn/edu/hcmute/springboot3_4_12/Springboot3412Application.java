@@ -14,6 +14,7 @@ import vn.edu.hcmute.springboot3_4_12.service.IStorageService;
 
 @SpringBootApplication
 @EnableAsync
+@org.springframework.cache.annotation.EnableCaching
 public class Springboot3412Application {
 
 
