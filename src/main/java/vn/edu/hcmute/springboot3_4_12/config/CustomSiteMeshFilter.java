@@ -9,20 +9,21 @@ public class CustomSiteMeshFilter extends ConfigurableSiteMeshFilter{
 
 	@Override
 	protected void applyCustomConfiguration(SiteMeshFilterBuilder builder) {
-		// Decorator mặc định cho user
-		builder.addDecoratorPath("/*", "main-decorator.jsp");
-
-		// Decorator cho admin
-		builder.addDecoratorPath("/admin/*", "admin-decorator.jsp");
-
-		// Decorator cho vendor
-		builder.addDecoratorPath("/vendor/*", "vendor-decorator.jsp");
-		
-		// Exclude
+		// Exclude - Các đường dẫn không áp dụng decorator
 		builder.addExcludedPath("/api/*");
 		builder.addExcludedPath("/resources/*");
 		builder.addExcludedPath("/static/*");
 		builder.addExcludedPath("/login");
 		builder.addExcludedPath("/register");
+		builder.addExcludedPath("/error");
+
+		// Decorator cho admin - Ưu tiên trước
+		builder.addDecoratorPath("/admin/*", "/WEB-INF/decorators/admin-decorator.jsp");
+
+		// Decorator cho vendor - Ưu tiên trước
+		builder.addDecoratorPath("/vendor/*", "/WEB-INF/decorators/vendor-decorator.jsp");
+
+		// Decorator mặc định cho user - Áp dụng cuối cùng (catch-all)
+		builder.addDecoratorPath("/*", "/WEB-INF/decorators/main-decorator.jsp");
 	}
 }
