@@ -1,0 +1,668 @@
+2026-01-04T20:28:31.616137232Z #14 54.31 Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-loader-tools/3.4.12/spring-boot-loader-tools-3.4.12.jar
+2026-01-04T20:28:31.616141332Z #14 54.32 Downloaded from central: https://repo.maven.apache.org/maven2/org/tomlj/tomlj/1.0.0/tomlj-1.0.0.jar (157 kB at 888 kB/s)
+2026-01-04T20:28:31.616144442Z #14 54.32 Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.3.2/maven-common-artifact-filters-3.3.2.jar
+2026-01-04T20:28:31.616147362Z #14 54.32 Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5-h2/5.3.4/httpcore5-h2-5.3.4.jar (242 kB at 1.3 MB/s)
+2026-01-04T20:28:31.616151342Z #14 54.32 Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.5.0/maven-shade-plugin-3.5.0.jar
+2026-01-04T20:28:31.616154422Z #14 54.32 Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.7.2/antlr4-runtime-4.7.2.jar (338 kB at 1.8 MB/s)
+2026-01-04T20:28:31.616157702Z #14 54.32 Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.5/asm-9.5.jar
+2026-01-04T20:28:31.616160372Z #14 54.33 Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar (20 kB at 108 kB/s)
+2026-01-04T20:28:31.616163332Z #14 54.33 Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.5/asm-commons-9.5.jar
+2026-01-04T20:28:31.914921897Z #14 54.33 Progress (1): 4.1/464 kB
+Progress (1): 7.7/464 kB
+Progress (1): 12/464 kB 
+Progress (1): 16/464 kB
+Progress (1): 20/464 kB
+Progress (1): 24/464 kB
+Progress (1): 28/464 kB
+Progress (1): 32/464 kB
+Progress (1): 36/464 kB
+Progress (1): 40/464 kB
+Progress (1): 45/464 kB
+Progress (1): 49/464 kB
+Progress (1): 53/464 kB
+Progress (1): 57/464 kB
+Progress (1): 61/464 kB
+Progress (1): 65/464 kB
+Progress (1): 69/464 kB
+Progress (1): 73/464 kB
+Progress (1): 77/464 kB
+Progress (1): 81/464 kB
+Progress (1): 86/464 kB
+Progress (1): 90/464 kB
+Progress (1): 94/464 kB
+Progress (1): 98/464 kB
+Progress (1): 102/464 kB
+Progress (1): 106/464 kB
+Progress (1): 110/464 kB
+Progress (1): 114/464 kB
+Progress (1): 118/464 kB
+Progress (1): 122/464 kB
+Progress (1): 127/464 kB
+Progress (1): 131/464 kB
+Progress (1): 135/464 kB
+Progress (1): 139/464 kB
+Progress (1): 143/464 kB
+Progress (1): 147/464 kB
+Progress (1): 151/464 kB
+Progress (1): 155/464 kB
+Progress (1): 159/464 kB
+Progress (1): 163/464 kB
+Progress (1): 167/464 kB
+Progress (1): 172/464 kB
+Progress (1): 176/464 kB
+Progress (1): 180/464 kB
+Progress (1): 184/464 kB
+Progress (1): 188/464 kB
+Progress (1): 192/464 kB
+Progress (1): 196/464 kB
+Progress (1): 200/464 kB
+Progress (1): 204/464 kB
+Progress (1): 208/464 kB
+Progress (1): 213/464 kB
+Progress (1): 217/464 kB
+Progress (1): 221/464 kB
+Progress (1): 225/464 kB
+Progress (1): 229/464 kB
+Progress (1): 233/464 kB
+Progress (1): 237/464 kB
+Progress (1): 241/464 kB
+Progress (1): 245/464 kB
+Progress (1): 249/464 kB
+Progress (1): 253/464 kB
+Progress (1): 258/464 kB
+Progress (1): 262/464 kB
+Progress (1): 266/464 kB
+Progress (1): 270/464 kB
+Progress (1): 274/464 kB
+Progress (1): 278/464 kB
+Progress (1): 282/464 kB
+Progress (1): 286/464 kB
+Progress (1): 290/464 kB
+Progress (1): 294/464 kB
+Progress (1): 299/464 kB
+Progress (1): 303/464 kB
+Progress (1): 307/464 kB
+Progress (1): 311/464 kB
+Progress (1): 315/464 kB
+Progress (1): 319/464 kB
+Progress (1): 323/464 kB
+Progress (1): 327/464 kB
+Progress (1): 331/464 kB
+Progress (1): 335/464 kB
+Progress (1): 339/464 kB
+Progress (1): 344/464 kB
+Progress (1): 348/464 kB
+Progress (1): 352/464 kB
+Progress (1): 356/464 kB
+Progress (1): 360/464 kB
+Progress (1): 364/464 kB
+Progress (1): 368/464 kB
+Progress (1): 372/464 kB
+Progress (1): 376/464 kB
+Progress (1): 380/464 kB
+Progress (1): 385/464 kB
+Progress (1): 389/464 kB
+Progress (1): 393/464 kB
+Progress (1): 397/464 kB
+Progress (1): 401/464 kB
+Progress (1): 405/464 kB
+Progress (1): 409/464 kB
+Progress (1): 413/464 kB
+Progress (1): 417/464 kB
+Progress (1): 421/464 kB
+Progress (1): 426/464 kB
+Progress (1): 430/464 kB
+Progress (1): 434/464 kB
+Progress (1): 438/464 kB
+Progress (1): 442/464 kB
+Progress (1): 446/464 kB
+Progress (1): 450/464 kB
+Progress (1): 454/464 kB
+Progress (1): 458/464 kB
+Progress (1): 462/464 kB
+Progress (1): 464 kB    
+Progress (2): 464 kB | 4.1/147 kB
+Progress (2): 464 kB | 7.7/147 kB
+Progress (2): 464 kB | 12/147 kB 
+Progress (2): 464 kB | 16/147 kB
+Progress (2): 464 kB | 20/147 kB
+Progress (2): 464 kB | 24/147 kB
+Progress (2): 464 kB | 28/147 kB
+Progress (2): 464 kB | 32/147 kB
+Progress (2): 464 kB | 36/147 kB
+Progress (2): 464 kB | 40/147 kB
+Progress (2): 464 kB | 45/147 kB
+Progress (2): 464 kB | 49/147 kB
+Progress (2): 464 kB | 53/147 kB
+Progress (2): 464 kB | 57/147 kB
+Progress (2): 464 kB | 61/147 kB
+Progress (2): 464 kB | 65/147 kB
+Progress (2): 464 kB | 69/147 kB
+Progress (2): 464 kB | 73/147 kB
+Progress (2): 464 kB | 77/147 kB
+Progress (2): 464 kB | 81/147 kB
+Progress (2): 464 kB | 86/147 kB
+Progress (2): 464 kB | 90/147 kB
+Progress (2): 464 kB | 94/147 kB
+Progress (2): 464 kB | 98/147 kB
+Progress (3): 464 kB | 98/147 kB | 4.0/58 kB
+Progress (3): 464 kB | 102/147 kB | 4.0/58 kB
+Progress (3): 464 kB | 106/147 kB | 4.0/58 kB
+Progress (3): 464 kB | 110/147 kB | 4.0/58 kB
+Progress (3): 464 kB | 110/147 kB | 8.1/58 kB
+Progress (3): 464 kB | 114/147 kB | 8.1/58 kB
+Progress (3): 464 kB | 114/147 kB | 12/58 kB 
+Progress (3): 464 kB | 118/147 kB | 12/58 kB
+Progress (3): 464 kB | 118/147 kB | 16/58 kB
+Progress (3): 464 kB | 122/147 kB | 16/58 kB
+Progress (3): 464 kB | 122/147 kB | 20/58 kB
+Progress (3): 464 kB | 127/147 kB | 20/58 kB
+Progress (3): 464 kB | 127/147 kB | 24/58 kB
+Progress (4): 464 kB | 127/147 kB | 24/58 kB | 4.1/72 kB
+Progress (4): 464 kB | 127/147 kB | 29/58 kB | 4.1/72 kB
+Progress (4): 464 kB | 127/147 kB | 29/58 kB | 7.7/72 kB
+Progress (4): 464 kB | 131/147 kB | 29/58 kB | 7.7/72 kB
+Progress (4): 464 kB | 131/147 kB | 29/58 kB | 12/72 kB 
+Progress (4): 464 kB | 131/147 kB | 29/58 kB | 16/72 kB
+Progress (4): 464 kB | 131/147 kB | 33/58 kB | 16/72 kB
+Progress (4): 464 kB | 135/147 kB | 33/58 kB | 16/72 kB
+Progress (4): 464 kB | 135/147 kB | 37/58 kB | 16/72 kB
+Progress (4): 464 kB | 135/147 kB | 37/58 kB | 20/72 kB
+Progress (4): 464 kB | 135/147 kB | 41/58 kB | 20/72 kB
+Progress (4): 464 kB | 135/147 kB | 41/58 kB | 24/72 kB
+Progress (4): 464 kB | 135/147 kB | 45/58 kB | 24/72 kB
+Progress (4): 464 kB | 139/147 kB | 45/58 kB | 24/72 kB
+Progress (4): 464 kB | 139/147 kB | 49/58 kB | 24/72 kB
+Progress (4): 464 kB | 139/147 kB | 49/58 kB | 28/72 kB
+Progress (4): 464 kB | 143/147 kB | 49/58 kB | 28/72 kB
+Progress (4): 464 kB | 143/147 kB | 53/58 kB | 28/72 kB
+Progress (4): 464 kB | 147 kB | 53/58 kB | 28/72 kB    
+Progress (4): 464 kB | 147 kB | 57/58 kB | 28/72 kB
+Progress (4): 464 kB | 147 kB | 57/58 kB | 32/72 kB
+Progress (4): 464 kB | 147 kB | 58 kB | 32/72 kB   
+Progress (4): 464 kB | 147 kB | 58 kB | 36/72 kB
+Progress (4): 464 kB | 147 kB | 58 kB | 40/72 kB
+Progress (4): 464 kB | 147 kB | 58 kB | 45/72 kB
+Progress (4): 464 kB | 147 kB | 58 kB | 49/72 kB
+Progress (4): 464 kB | 147 kB | 58 kB | 53/72 kB
+Progress (4): 464 kB | 147 kB | 58 kB | 57/72 kB
+Progress (4): 464 kB | 147 kB | 58 kB | 61/72 kB
+Progress (4): 464 kB | 147 kB | 58 kB | 65/72 kB
+Progress (4): 464 kB | 147 kB | 58 kB | 69/72 kB
+Progress (4): 464 kB | 147 kB | 58 kB | 72 kB   
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 4.0/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 8.1/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 12/122 kB 
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 16/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 20/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 24/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 29/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 33/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 37/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 41/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 45/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 49/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 53/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 57/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 61/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 65/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 70/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 74/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 78/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 82/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 86/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 90/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 94/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 98/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 102/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 106/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 111/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 115/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 119/122 kB
+Progress (5): 464 kB | 147 kB | 58 kB | 72 kB | 122 kB    
+                                                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-loader-tools/3.4.12/spring-boot-loader-tools-3.4.12.jar (464 kB at 2.1 MB/s)
+2026-01-04T20:28:31.914963328Z #14 54.37 Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.5/asm-tree-9.5.jar
+2026-01-04T20:28:31.914971168Z #14 54.37 Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.5.0/maven-shade-plugin-3.5.0.jar (147 kB at 635 kB/s)
+2026-01-04T20:28:31.914980118Z #14 54.37 Downloading from central: https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar
+2026-01-04T20:28:31.914988389Z #14 54.39 Progress (4): 58 kB | 72 kB | 122 kB | 4.1/52 kB
+Progress (4): 58 kB | 72 kB | 122 kB | 7.7/52 kB
+Progress (4): 58 kB | 72 kB | 122 kB | 11/52 kB 
+Progress (4): 58 kB | 72 kB | 122 kB | 16/52 kB
+Progress (4): 58 kB | 72 kB | 122 kB | 20/52 kB
+Progress (4): 58 kB | 72 kB | 122 kB | 24/52 kB
+Progress (4): 58 kB | 72 kB | 122 kB | 28/52 kB
+Progress (4): 58 kB | 72 kB | 122 kB | 32/52 kB
+Progress (4): 58 kB | 72 kB | 122 kB | 36/52 kB
+Progress (4): 58 kB | 72 kB | 122 kB | 40/52 kB
+Progress (4): 58 kB | 72 kB | 122 kB | 44/52 kB
+Progress (4): 58 kB | 72 kB | 122 kB | 48/52 kB
+Progress (4): 58 kB | 72 kB | 122 kB | 52 kB   
+                                            
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.3.2/maven-common-artifact-filters-3.3.2.jar (58 kB at 236 kB/s)
+2026-01-04T20:28:31.914992409Z #14 54.39 Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.2.1/maven-dependency-tree-3.2.1.jar
+2026-01-04T20:28:31.914997819Z #14 54.39 Progress (4): 72 kB | 122 kB | 52 kB | 4.1/328 kB
+Progress (4): 72 kB | 122 kB | 52 kB | 7.7/328 kB
+Progress (4): 72 kB | 122 kB | 52 kB | 12/328 kB 
+Progress (4): 72 kB | 122 kB | 52 kB | 16/328 kB
+Progress (4): 72 kB | 122 kB | 52 kB | 20/328 kB
+Progress (4): 72 kB | 122 kB | 52 kB | 24/328 kB
+Progress (4): 72 kB | 122 kB | 52 kB | 28/328 kB
+Progress (4): 72 kB | 122 kB | 52 kB | 32/328 kB
+Progress (4): 72 kB | 122 kB | 52 kB | 36/328 kB
+Progress (4): 72 kB | 122 kB | 52 kB | 40/328 kB
+Progress (4): 72 kB | 122 kB | 52 kB | 45/328 kB
+Progress (4): 72 kB | 122 kB | 52 kB | 49/328 kB
+Progress (4): 72 kB | 122 kB | 52 kB | 53/328 kB
+Progress (4): 72 kB | 122 kB | 52 kB | 57/328 kB
+Progress (4): 72 kB | 122 kB | 52 kB | 61/328 kB
+Progress (4): 72 kB | 122 kB | 52 kB | 65/328 kB
+                                                
+Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.5/asm-commons-9.5.jar (72 kB at 289 kB/s)
+2026-01-04T20:28:31.915001939Z #14 54.39 Progress (3): 122 kB | 52 kB | 69/328 kB
+                                        
+Downloading from central: https://repo.maven.apache.org/maven2/org/vafer/jdependency/2.8.0/jdependency-2.8.0.jar
+2026-01-04T20:28:31.915020779Z #14 54.39 Progress (3): 122 kB | 52 kB | 73/328 kB
+Progress (3): 122 kB | 52 kB | 77/328 kB
+Progress (3): 122 kB | 52 kB | 81/328 kB
+Progress (3): 122 kB | 52 kB | 86/328 kB
+Progress (3): 122 kB | 52 kB | 90/328 kB
+Progress (3): 122 kB | 52 kB | 94/328 kB
+Progress (3): 122 kB | 52 kB | 98/328 kB
+Progress (3): 122 kB | 52 kB | 102/328 kB
+Progress (3): 122 kB | 52 kB | 106/328 kB
+Progress (3): 122 kB | 52 kB | 110/328 kB
+Progress (3): 122 kB | 52 kB | 114/328 kB
+Progress (3): 122 kB | 52 kB | 118/328 kB
+Progress (3): 122 kB | 52 kB | 122/328 kB
+Progress (3): 122 kB | 52 kB | 127/328 kB
+Progress (3): 122 kB | 52 kB | 131/328 kB
+Progress (3): 122 kB | 52 kB | 135/328 kB
+Progress (3): 122 kB | 52 kB | 139/328 kB
+Progress (3): 122 kB | 52 kB | 143/328 kB
+Progress (3): 122 kB | 52 kB | 147/328 kB
+Progress (3): 122 kB | 52 kB | 151/328 kB
+Progress (3): 122 kB | 52 kB | 155/328 kB
+Progress (3): 122 kB | 52 kB | 159/328 kB
+Progress (3): 122 kB | 52 kB | 163/328 kB
+Progress (3): 122 kB | 52 kB | 167/328 kB
+Progress (3): 122 kB | 52 kB | 172/328 kB
+Progress (3): 122 kB | 52 kB | 176/328 kB
+Progress (3): 122 kB | 52 kB | 180/328 kB
+Progress (3): 122 kB | 52 kB | 184/328 kB
+Progress (3): 122 kB | 52 kB | 188/328 kB
+Progress (3): 122 kB | 52 kB | 192/328 kB
+Progress (3): 122 kB | 52 kB | 196/328 kB
+Progress (3): 122 kB | 52 kB | 200/328 kB
+Progress (3): 122 kB | 52 kB | 204/328 kB
+Progress (3): 122 kB | 52 kB | 208/328 kB
+Progress (3): 122 kB | 52 kB | 213/328 kB
+Progress (3): 122 kB | 52 kB | 217/328 kB
+Progress (3): 122 kB | 52 kB | 221/328 kB
+Progress (3): 122 kB | 52 kB | 225/328 kB
+Progress (3): 122 kB | 52 kB | 229/328 kB
+Progress (3): 122 kB | 52 kB | 233/328 kB
+Progress (3): 122 kB | 52 kB | 237/328 kB
+Progress (3): 122 kB | 52 kB | 241/328 kB
+Progress (3): 122 kB | 52 kB | 245/328 kB
+Progress (3): 122 kB | 52 kB | 249/328 kB
+Progress (3): 122 kB | 52 kB | 253/328 kB
+Progress (3): 122 kB | 52 kB | 258/328 kB
+Progress (3): 122 kB | 52 kB | 262/328 kB
+Progress (3): 122 kB | 52 kB | 266/328 kB
+Progress (3): 122 kB | 52 kB | 270/328 kB
+Progress (3): 122 kB | 52 kB | 274/328 kB
+Progress (3): 122 kB | 52 kB | 278/328 kB
+Progress (3): 122 kB | 52 kB | 282/328 kB
+Progress (3): 122 kB | 52 kB | 286/328 kB
+Progress (3): 122 kB | 52 kB | 290/328 kB
+Progress (3): 122 kB | 52 kB | 294/328 kB
+Progress (3): 122 kB | 52 kB | 299/328 kB
+Progress (3): 122 kB | 52 kB | 303/328 kB
+Progress (3): 122 kB | 52 kB | 307/328 kB
+Progress (3): 122 kB | 52 kB | 311/328 kB
+Progress (3): 122 kB | 52 kB | 315/328 kB
+Progress (3): 122 kB | 52 kB | 319/328 kB
+Progress (3): 122 kB | 52 kB | 323/328 kB
+Progress (3): 122 kB | 52 kB | 327/328 kB
+Progress (3): 122 kB | 52 kB | 328 kB    
+                                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.5/asm-9.5.jar (122 kB at 480 kB/s)
+2026-01-04T20:28:31.91503098Z #14 54.40 Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar
+2026-01-04T20:28:31.91505191Z #14 54.41 Progress (3): 52 kB | 328 kB | 4.1/43 kB
+Progress (3): 52 kB | 328 kB | 7.7/43 kB
+Progress (3): 52 kB | 328 kB | 12/43 kB 
+Progress (3): 52 kB | 328 kB | 16/43 kB
+Progress (3): 52 kB | 328 kB | 20/43 kB
+Progress (3): 52 kB | 328 kB | 24/43 kB
+Progress (3): 52 kB | 328 kB | 28/43 kB
+Progress (3): 52 kB | 328 kB | 32/43 kB
+Progress (3): 52 kB | 328 kB | 36/43 kB
+Progress (3): 52 kB | 328 kB | 40/43 kB
+Progress (3): 52 kB | 328 kB | 43 kB   
+Progress (4): 52 kB | 328 kB | 43 kB | 4.1/752 kB
+Progress (4): 52 kB | 328 kB | 43 kB | 7.7/752 kB
+Progress (4): 52 kB | 328 kB | 43 kB | 12/752 kB 
+Progress (4): 52 kB | 328 kB | 43 kB | 16/752 kB
+Progress (4): 52 kB | 328 kB | 43 kB | 20/752 kB
+Progress (4): 52 kB | 328 kB | 43 kB | 24/752 kB
+Progress (4): 52 kB | 328 kB | 43 kB | 28/752 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 28/752 kB | 4.1/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 32/752 kB | 4.1/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 32/752 kB | 7.7/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 36/752 kB | 7.7/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 40/752 kB | 7.7/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 40/752 kB | 12/233 kB 
+Progress (5): 52 kB | 328 kB | 43 kB | 40/752 kB | 16/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 40/752 kB | 20/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 45/752 kB | 20/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 45/752 kB | 24/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 49/752 kB | 24/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 49/752 kB | 28/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 53/752 kB | 28/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 53/752 kB | 32/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 57/752 kB | 32/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 57/752 kB | 36/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 57/752 kB | 40/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 61/752 kB | 40/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 61/752 kB | 45/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 65/752 kB | 45/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 65/752 kB | 49/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 69/752 kB | 49/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 69/752 kB | 53/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 69/752 kB | 57/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 73/752 kB | 57/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 73/752 kB | 61/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 73/752 kB | 65/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 77/752 kB | 65/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 77/752 kB | 69/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 81/752 kB | 69/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 81/752 kB | 73/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 86/752 kB | 73/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 86/752 kB | 77/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 90/752 kB | 77/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 90/752 kB | 81/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 90/752 kB | 86/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 90/752 kB | 90/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 94/752 kB | 90/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 94/752 kB | 94/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 94/752 kB | 98/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 98/752 kB | 98/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 98/752 kB | 102/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 98/752 kB | 106/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 102/752 kB | 106/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 102/752 kB | 110/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 106/752 kB | 110/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 106/752 kB | 114/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 110/752 kB | 114/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 110/752 kB | 118/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 114/752 kB | 118/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 114/752 kB | 122/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 118/752 kB | 122/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 118/752 kB | 127/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 122/752 kB | 127/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 122/752 kB | 131/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 122/752 kB | 135/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 127/752 kB | 135/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 127/752 kB | 139/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 131/752 kB | 139/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 131/752 kB | 143/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 135/752 kB | 143/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 135/752 kB | 147/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 139/752 kB | 147/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 139/752 kB | 151/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 139/752 kB | 155/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 143/752 kB | 155/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 143/752 kB | 159/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 147/752 kB | 159/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 147/752 kB | 163/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 147/752 kB | 167/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 147/752 kB | 172/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 151/752 kB | 172/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 151/752 kB | 176/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 155/752 kB | 176/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 155/752 kB | 180/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 155/752 kB | 184/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 159/752 kB | 184/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 159/752 kB | 188/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 163/752 kB | 188/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 163/752 kB | 192/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 167/752 kB | 192/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 167/752 kB | 196/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 172/752 kB | 196/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 172/752 kB | 200/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 172/752 kB | 204/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 176/752 kB | 204/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 176/752 kB | 208/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 180/752 kB | 208/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 180/752 kB | 213/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 184/752 kB | 213/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 184/752 kB | 217/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 184/752 kB | 220/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 184/752 kB | 224/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 188/752 kB | 224/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 188/752 kB | 228/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 192/752 kB | 228/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 192/752 kB | 233/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 196/752 kB | 233/233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 196/752 kB | 233 kB    
+Progress (5): 52 kB | 328 kB | 43 kB | 200/752 kB | 233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 204/752 kB | 233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 208/752 kB | 233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 213/752 kB | 233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 217/752 kB | 233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 221/752 kB | 233 kB
+Progress (5): 52 kB | 328 kB | 43 kB | 225/752 kB | 233 kB
+                                                          
+Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.5/asm-tree-9.5.jar (52 kB at 186 kB/s)
+2026-01-04T20:28:31.915074041Z #14 54.42 Progress (4): 328 kB | 43 kB | 229/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 233/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 237/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 241/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 245/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 249/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 253/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 258/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 262/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 266/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 270/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 274/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 278/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 282/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 286/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 290/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 294/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 299/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 303/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 307/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 311/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 315/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 319/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 323/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 327/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 331/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 335/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 339/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 344/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 348/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 352/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 356/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 360/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 364/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 368/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 372/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 376/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 380/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 385/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 389/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 393/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 397/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 401/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 405/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 409/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 413/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 417/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 421/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 426/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 430/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 434/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 438/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 442/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 446/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 450/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 454/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 458/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 462/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 466/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 471/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 475/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 479/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 483/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 487/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 491/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 495/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 499/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 503/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 507/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 512/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 516/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 520/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 524/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 528/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 532/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 536/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 540/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 544/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 548/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 552/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 557/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 561/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 565/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 569/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 573/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 577/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 581/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 585/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 589/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 593/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 598/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 602/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 606/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 610/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 614/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 618/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 622/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 626/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 630/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 634/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 639/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 643/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 647/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 651/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 655/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 659/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 663/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 667/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 671/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 675/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 679/752 kB | 233 kB
+Progress (4): 328 kB | 43 kB | 684/752 kB | 233 kB
+                                                  
+Downloaded from central: https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar (328 kB at 1.2 MB/s)
+2026-01-04T20:28:31.915086941Z #14 54.43 Progress (3): 43 kB | 688/752 kB | 233 kB
+Progress (3): 43 kB | 692/752 kB | 233 kB
+Progress (3): 43 kB | 696/752 kB | 233 kB
+Progress (3): 43 kB | 700/752 kB | 233 kB
+Progress (3): 43 kB | 704/752 kB | 233 kB
+Progress (3): 43 kB | 708/752 kB | 233 kB
+Progress (3): 43 kB | 712/752 kB | 233 kB
+Progress (3): 43 kB | 716/752 kB | 233 kB
+Progress (3): 43 kB | 720/752 kB | 233 kB
+Progress (3): 43 kB | 725/752 kB | 233 kB
+Progress (3): 43 kB | 729/752 kB | 233 kB
+Progress (3): 43 kB | 733/752 kB | 233 kB
+Progress (3): 43 kB | 737/752 kB | 233 kB
+Progress (3): 43 kB | 741/752 kB | 233 kB
+Progress (3): 43 kB | 745/752 kB | 233 kB
+Progress (3): 43 kB | 749/752 kB | 233 kB
+Progress (3): 43 kB | 752 kB | 233 kB    
+                                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.2.1/maven-dependency-tree-3.2.1.jar (43 kB at 138 kB/s)
+2026-01-04T20:28:31.915090971Z #14 54.45 Downloaded from central: https://repo.maven.apache.org/maven2/org/vafer/jdependency/2.8.0/jdependency-2.8.0.jar (233 kB at 748 kB/s)
+2026-01-04T20:28:31.915094532Z #14 54.46 Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar (752 kB at 2.3 MB/s)
+2026-01-04T20:28:32.730396563Z #14 55.48 [INFO] Replacing main artifact /app/target/springboot3_4_12-0.0.1-SNAPSHOT.war with repackaged archive, adding nested dependencies in BOOT-INF/.
+2026-01-04T20:28:32.730425464Z #14 55.48 [INFO] The original artifact has been renamed to /app/target/springboot3_4_12-0.0.1-SNAPSHOT.war.original
+2026-01-04T20:28:32.882305672Z #14 55.48 [INFO] ------------------------------------------------------------------------
+2026-01-04T20:28:32.882323242Z #14 55.48 [INFO] BUILD SUCCESS
+2026-01-04T20:28:32.882326162Z #14 55.48 [INFO] ------------------------------------------------------------------------
+2026-01-04T20:28:32.882330192Z #14 55.48 [INFO] Total time:  54.161 s
+2026-01-04T20:28:32.882334092Z #14 55.48 [INFO] Finished at: 2026-01-04T20:28:32Z
+2026-01-04T20:28:32.882336302Z #14 55.48 [INFO] ------------------------------------------------------------------------
+2026-01-04T20:28:53.854719546Z #14 DONE 76.6s
+2026-01-04T20:28:54.274591841Z 
+2026-01-04T20:28:54.274619952Z #15 [stage-1 2/3] WORKDIR /app
+2026-01-04T20:28:54.449518438Z #15 sha256:2d35ebdb57d9971fea0cac1582aa78935adf8058b2cc32db163c98822e5dfa1b 3.80MB / 3.80MB 0.0s done
+2026-01-04T20:28:54.449536499Z #15 extracting sha256:2d35ebdb57d9971fea0cac1582aa78935adf8058b2cc32db163c98822e5dfa1b 0.1s done
+2026-01-04T20:28:54.597316421Z #15 sha256:72e1a9c5a7ff69b6a49186e081bc330d9572e229f2c818aa23374161f7a78611 16.29MB / 16.29MB 0.1s done
+2026-01-04T20:28:54.751231616Z #15 extracting sha256:72e1a9c5a7ff69b6a49186e081bc330d9572e229f2c818aa23374161f7a78611
+2026-01-04T20:28:55.043124907Z #15 extracting sha256:72e1a9c5a7ff69b6a49186e081bc330d9572e229f2c818aa23374161f7a78611 0.4s done
+2026-01-04T20:28:55.215141251Z #15 sha256:5b8007edd66bab6d1c68463c2a313deb13b319de66422e9b16eaf4a14de89248 40.21MB / 46.72MB 0.2s
+2026-01-04T20:28:55.399519734Z #15 sha256:5b8007edd66bab6d1c68463c2a313deb13b319de66422e9b16eaf4a14de89248 46.72MB / 46.72MB 0.2s done
+2026-01-04T20:28:55.399540535Z #15 extracting sha256:5b8007edd66bab6d1c68463c2a313deb13b319de66422e9b16eaf4a14de89248
+2026-01-04T20:28:56.222319238Z #15 extracting sha256:5b8007edd66bab6d1c68463c2a313deb13b319de66422e9b16eaf4a14de89248 1.0s done
+2026-01-04T20:28:56.32394235Z #15 sha256:90f0c913436040e8043051a25779be2670ee72a7efec25b6e4bbb08d54877db4 126B / 126B done
+2026-01-04T20:28:56.323963691Z #15 extracting sha256:90f0c913436040e8043051a25779be2670ee72a7efec25b6e4bbb08d54877db4 0.0s done
+2026-01-04T20:28:56.323967221Z #15 sha256:867c03b825a35a5db0249203ef051f7e12f2bc4c110f281f6de68072d3c55bab 2.28kB / 2.28kB done
+2026-01-04T20:28:56.323970241Z #15 extracting sha256:867c03b825a35a5db0249203ef051f7e12f2bc4c110f281f6de68072d3c55bab 0.0s done
+2026-01-04T20:28:56.323973121Z #15 sha256:4271461550b22739c36a48527bb6604a87c3a014638e7ff0ed7dedb934338aee 90B / 90B done
+2026-01-04T20:28:56.323976391Z #15 extracting sha256:4271461550b22739c36a48527bb6604a87c3a014638e7ff0ed7dedb934338aee
+2026-01-04T20:28:56.492093386Z #15 extracting sha256:4271461550b22739c36a48527bb6604a87c3a014638e7ff0ed7dedb934338aee 0.0s done
+2026-01-04T20:28:56.492114956Z #15 CACHED
+2026-01-04T20:28:56.492118947Z 
+2026-01-04T20:28:56.492124087Z #16 [stage-1 3/3] COPY --from=build /app/target/*.war app.war
+2026-01-04T20:28:57.105534553Z #16 DONE 0.8s
+2026-01-04T20:28:57.260762425Z 
+2026-01-04T20:28:57.260786965Z #17 exporting to docker image format
+2026-01-04T20:28:57.260792146Z #17 exporting layers
+2026-01-04T20:28:58.947218973Z #17 exporting layers 1.8s done
+2026-01-04T20:28:59.114799993Z #17 exporting manifest sha256:575fa591476726979f656f2dbe7eb85e528544745f25128a6783f6e8682b8d2c done
+2026-01-04T20:28:59.114845184Z #17 exporting config sha256:83d32ab8ed667bef9c249e0a62dbcb943a1f9ee8e4f0187b8e8e222a8afb0bfa done
+2026-01-04T20:28:59.742010478Z #17 DONE 2.6s
+2026-01-04T20:28:59.892863286Z 
+2026-01-04T20:28:59.892887547Z #18 exporting cache to client directory
+2026-01-04T20:28:59.892890047Z #18 preparing build cache for export
+2026-01-04T20:29:15.449280804Z #18 writing cache image manifest sha256:bfbf7b3da7a450962355ae2d86806b845ad7de8959851cd4536a7c3c730c7289 0.0s done
+2026-01-04T20:29:15.449303725Z #18 DONE 15.6s
+2026-01-04T20:29:16.083299281Z Pushing image to registry...
+2026-01-04T20:29:19.397737491Z Upload succeeded
+2026-01-04T20:29:22.515086375Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-01-04T20:29:22.678454556Z ==> Deploying...
+2026-01-04T20:30:29.927365673Z ==> No open ports detected, continuing to scan...
+2026-01-04T20:30:30.35867642Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-01-04T20:31:19.912704384Z 2026-01-04T20:31:19.912Z  INFO 1 --- [springboot3_4_12] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-04T20:31:20.112948378Z 2026-01-04T20:31:20.112Z  WARN 1 --- [springboot3_4_12] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-01-04T20:31:20.51610912Z 2026-01-04T20:31:20.515Z  INFO 1 --- [springboot3_4_12] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-01-04T20:31:20.516134161Z 
+2026-01-04T20:31:20.516137021Z Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-04T20:31:21.112277803Z 2026-01-04T20:31:21.017Z ERROR 1 --- [springboot3_4_12] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2026-01-04T20:31:21.112297474Z 
+2026-01-04T20:31:21.112301044Z ***************************
+2026-01-04T20:31:21.112303324Z APPLICATION FAILED TO START
+2026-01-04T20:31:21.112305384Z ***************************
+2026-01-04T20:31:21.112307294Z 
+2026-01-04T20:31:21.112309404Z Description:
+2026-01-04T20:31:21.112311344Z 
+2026-01-04T20:31:21.112313854Z Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+2026-01-04T20:31:21.112315744Z 
+2026-01-04T20:31:21.112318374Z Reason: Failed to determine suitable jdbc url
+2026-01-04T20:31:21.112320244Z 
+2026-01-04T20:31:21.112322004Z 
+2026-01-04T20:31:21.112323975Z Action:
+2026-01-04T20:31:21.112325815Z 
+2026-01-04T20:31:21.112328875Z Consider the following:
+2026-01-04T20:31:21.112331535Z 	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+2026-01-04T20:31:21.112334295Z 	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+2026-01-04T20:31:21.112336175Z 
+2026-01-04T20:31:23.142229341Z Picked up JAVA_TOOL_OPTIONS: -Xmx350m -Xms256m -Djava.net.preferIPv4Stack=true
+2026-01-04T20:31:23.518955297Z ==> Exited with status 1
+2026-01-04T20:31:23.681524209Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys

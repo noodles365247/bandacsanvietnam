@@ -18,19 +18,27 @@ public class CloudDataSourceConfig {
     @Bean
     @Primary
     @ConfigurationProperties("spring.datasource.hikari")
-    public DataSource dataSource(DataSourceProperties properties, @Value("${MYSQL_URL:}") String mysqlUrl) {
-        if (StringUtils.hasText(mysqlUrl)) {
-            String maskedUrl = mysqlUrl.replaceAll(":[^:@]+@", ":******@");
-            System.out.println("CloudDataSourceConfig: Found MYSQL_URL env var: " + maskedUrl);
+    public DataSource dataSource(DataSourceProperties properties, 
+                                 @Value("${MYSQL_URL:}") String mysqlUrl,
+                                 @Value("${DATABASE_URL:}") String databaseUrl) {
+        
+        String urlToUse = mysqlUrl;
+        if (!StringUtils.hasText(urlToUse)) {
+            urlToUse = databaseUrl;
+        }
+
+        if (StringUtils.hasText(urlToUse)) {
+            String maskedUrl = urlToUse.replaceAll(":[^:@]+@", ":******@");
+            System.out.println("CloudDataSourceConfig: Found DB URL env var: " + maskedUrl);
         } else {
-            System.out.println("CloudDataSourceConfig: MYSQL_URL env var is empty or null.");
+            System.out.println("CloudDataSourceConfig: No MYSQL_URL or DATABASE_URL found. Checking properties...");
         }
 
         HikariDataSource ds;
-        // Check if MYSQL_URL is present and starts with mysql:// (typical for Railway/Cloud)
-        if (StringUtils.hasText(mysqlUrl) && mysqlUrl.startsWith("mysql://")) {
+        // Check if URL is present and starts with mysql:// (typical for Railway/Cloud)
+        if (StringUtils.hasText(urlToUse) && urlToUse.startsWith("mysql://")) {
             try {
-                URI uri = URI.create(mysqlUrl);
+                URI uri = URI.create(urlToUse);
                 String host = uri.getHost();
                 int port = uri.getPort();
                 String path = uri.getPath(); // e.g., /railway
@@ -74,15 +82,22 @@ public class CloudDataSourceConfig {
                         .password(password)
                         .build();
                 
-                System.out.println("Configured DataSource from MYSQL_URL: " + jdbcUrl);
+                System.out.println("Configured DataSource from URL: " + jdbcUrl);
                 
             } catch (Exception e) {
-                System.err.println("Failed to parse MYSQL_URL, falling back to default: " + e.getMessage());
+                System.err.println("Failed to parse DB URL, falling back to default: " + e.getMessage());
                 ds = properties.initializeDataSourceBuilder().type(HikariDataSource.class).build();
             }
         } else {
             // Standard behavior using application.properties
-            ds = properties.initializeDataSourceBuilder().type(HikariDataSource.class).build();
+            System.out.println("CloudDataSourceConfig: Falling back to application.properties/spring.datasource.*");
+            try {
+                ds = properties.initializeDataSourceBuilder().type(HikariDataSource.class).build();
+            } catch (Exception e) {
+                 System.err.println("CRITICAL: Failed to configure DataSource from properties. " +
+                        "Ensure 'spring.datasource.url' is set in application.properties OR 'MYSQL_URL' env var is provided.");
+                 throw e;
+            }
         }
         return ds;
     }
