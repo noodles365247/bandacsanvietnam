@@ -9,16 +9,16 @@ import java.util.*;
 
 @Configuration
 public class VNPayConfig {
-    @Value("${vnpay.url}")
+    @Value("${vnpay.url:${VNPAY_URL:}}")
     private String vnp_PayUrl;
     
-    @Value("${vnpay.return_url}")
+    @Value("${vnpay.return_url:${VNPAY_RETURN_URL:}}")
     private String vnp_ReturnUrl;
     
-    @Value("${vnpay.tmn_code}")
+    @Value("${vnpay.tmn_code:${VNPAY_TMN_CODE:}}")
     private String vnp_TmnCode;
     
-    @Value("${vnpay.hash_secret}")
+    @Value("${vnpay.hash_secret:${VNPAY_HASH_SECRET:}}")
     private String secretKey;
     
     @Value("${vnpay.api_url:https://sandbox.vnpayment.vn/merchant_webapi/api/transaction}")

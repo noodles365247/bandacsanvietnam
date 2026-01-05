@@ -19,6 +19,10 @@ public class VNPayServiceImpl implements IVNPayService {
 
     @Override
     public String createPaymentUrl(HttpServletRequest request, long amount, String orderInfo) {
+        if (isBlank(vnPayConfig.getVnp_PayUrl()) || isBlank(vnPayConfig.getVnp_ReturnUrl())
+                || isBlank(vnPayConfig.getVnp_TmnCode()) || isBlank(vnPayConfig.getSecretKey())) {
+            throw new IllegalStateException("VNPAY configuration is missing");
+        }
         String vnp_Version = "2.1.0";
         String vnp_Command = "pay";
         String vnp_TxnRef = VNPayConfig.getRandomNumber(8);
@@ -90,6 +94,9 @@ public class VNPayServiceImpl implements IVNPayService {
 
     @Override
     public int orderReturn(HttpServletRequest request) {
+        if (isBlank(vnPayConfig.getSecretKey())) {
+            return -1;
+        }
         Map<String, String> fields = new HashMap<>();
         for (Enumeration<String> params = request.getParameterNames(); params.hasMoreElements(); ) {
             String fieldName = params.nextElement();
@@ -142,5 +149,9 @@ public class VNPayServiceImpl implements IVNPayService {
             }
         }
         return sb.toString();
+    }
+
+    private boolean isBlank(String s) {
+        return s == null || s.trim().isEmpty();
     }
 }
