@@ -1,0 +1,50 @@
+2026-01-05T08:22:49.730868863Z 	Isolation level: undefined/unknown
+2026-01-05T08:22:49.730872193Z 	Minimum pool size: undefined/unknown
+2026-01-05T08:22:49.730875054Z 	Maximum pool size: undefined/unknown
+2026-01-05T08:23:17.83058582Z 2026-01-05T08:23:17.830Z  INFO 1 --- [springboot3_4_12] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-05T08:23:17.834278873Z 2026-01-05T08:23:17.834Z  INFO 1 --- [springboot3_4_12] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-05T08:23:24.231621913Z 2026-01-05T08:23:24.231Z  INFO 1 --- [springboot3_4_12] [           main] o.s.config.ConfigurableSiteMeshFilter    : SiteMesh 3.2.1 initialized with filter name 'siteMeshFilter'
+2026-01-05T08:23:27.432793061Z 2026-01-05T08:23:27.432Z  INFO 1 --- [springboot3_4_12] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-05T08:23:38.810360217Z ==> No open ports detected, continuing to scan...
+2026-01-05T08:23:39.19234509Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2026-01-05T08:23:46.729108793Z 2026-01-05T08:23:46.637Z  INFO 1 --- [springboot3_4_12] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsServiceImpl
+2026-01-05T08:23:47.235432739Z 2026-01-05T08:23:47.235Z  WARN 1 --- [springboot3_4_12] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'forgotPasswordController' defined in URL [jar:nested:/app/app.war/!WEB-INF/classes/!/vn/edu/hcmute/springboot3_4_12/controller/user/ForgotPasswordController.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'emailServiceImpl' defined in URL [jar:nested:/app/app.war/!WEB-INF/classes/!/vn/edu/hcmute/springboot3_4_12/service/impl/EmailServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.mail.javamail.JavaMailSender' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-01-05T08:23:47.332192158Z 2026-01-05T08:23:47.330Z  INFO 1 --- [springboot3_4_12] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-05T08:23:47.338156343Z 2026-01-05T08:23:47.337Z  INFO 1 --- [springboot3_4_12] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-05T08:23:47.53169329Z 2026-01-05T08:23:47.531Z  INFO 1 --- [springboot3_4_12] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-05T08:23:47.534653551Z 2026-01-05T08:23:47.534Z  INFO 1 --- [springboot3_4_12] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-05T08:23:48.037848974Z 2026-01-05T08:23:48.036Z  INFO 1 --- [springboot3_4_12] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-01-05T08:23:48.037866896Z 
+2026-01-05T08:23:48.037870146Z Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-05T08:23:48.735567486Z 2026-01-05T08:23:48.735Z ERROR 1 --- [springboot3_4_12] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2026-01-05T08:23:48.735586417Z 
+2026-01-05T08:23:48.735591377Z ***************************
+2026-01-05T08:23:48.735594167Z APPLICATION FAILED TO START
+2026-01-05T08:23:48.735597108Z ***************************
+2026-01-05T08:23:48.735599578Z 
+2026-01-05T08:23:48.735602018Z Description:
+2026-01-05T08:23:48.735604468Z 
+2026-01-05T08:23:48.735608488Z Parameter 0 of constructor in vn.edu.hcmute.springboot3_4_12.service.impl.EmailServiceImpl required a bean of type 'org.springframework.mail.javamail.JavaMailSender' that could not be found.
+2026-01-05T08:23:48.735610709Z 
+2026-01-05T08:23:48.735612769Z 
+2026-01-05T08:23:48.735615119Z Action:
+2026-01-05T08:23:48.735617549Z 
+2026-01-05T08:23:48.735621279Z Consider defining a bean of type 'org.springframework.mail.javamail.JavaMailSender' in your configuration.
+2026-01-05T08:23:48.73562365Z 
+2026-01-05T08:23:58.994149587Z Picked up JAVA_TOOL_OPTIONS: -Xmx350m -Xms256m -Djava.net.preferIPv4Stack=true
+2026-01-05T08:23:59.361376377Z ==> Exited with status 1
+2026-01-05T08:23:59.523113896Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2026-01-05T08:24:19.212476623Z 
+2026-01-05T08:24:19.212653036Z   .   ____          _            __ _ _
+2026-01-05T08:24:19.212674888Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-01-05T08:24:19.212677988Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-01-05T08:24:19.212680578Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-01-05T08:24:19.212683148Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-01-05T08:24:19.212685889Z  =========|_|==============|___/=/_/_/_/
+2026-01-05T08:24:19.212688319Z 
+2026-01-05T08:24:19.215495219Z  :: Spring Boot ::               (v3.4.12)
+2026-01-05T08:24:19.21550883Z 
+2026-01-05T08:24:20.715497203Z 2026-01-05T08:24:20.713Z  INFO 1 --- [springboot3_4_12] [           main] v.e.h.s.Springboot3412Application        : Starting Springboot3412Application v0.0.1-SNAPSHOT using Java 17.0.17 with PID 1 (/app/app.war started by root in /app)
+2026-01-05T08:24:20.716909134Z 2026-01-05T08:24:20.716Z  INFO 1 --- [springboot3_4_12] [           main] v.e.h.s.Springboot3412Application        : No active profile set, falling back to 1 default profile: "default"
+2026-01-05T08:24:48.514782199Z 2026-01-05T08:24:48.514Z  INFO 1 --- [springboot3_4_12] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-05T08:24:50.515248649Z 2026-01-05T08:24:50.514Z  INFO 1 --- [springboot3_4_12] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1895 ms. Found 13 JPA repository interfaces.
